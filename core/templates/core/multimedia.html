@@ -1,0 +1,206 @@
+{% extends "core/layout/base.html" %}
+{% load static %}
+
+{% block ContentPage %}
+    <div class="wy-grid-for-nav ">
+
+        <!-- navbar-side -->
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+            <div class="wy-side-scroll">
+
+                <!-- navbar-side-search -->
+                {% include "core/include/navbar-side-search.html" %}
+
+                <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+                    <p class="caption" role="heading">
+                        <span class="caption-text">منو</span>
+                    </p>
+                    <!-- Local TOC -->
+                    <div class="local-toc">
+                        <ul>
+                            <li class="toctree-l1 ">
+                                <a class="reference internal current" href="{% url 'index' %}">
+                                    صفحه اصلی
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toctree-l1" aria-expanded="true">
+                                <a class="reference internal " href="{% url 'page' %}">
+                                    <small>
+                                        این فقط یک صفحه با عنوان بسیار طولانی برای بررسی نحوه برخورد موضوع با این موقعیت
+                                        ها است
+                                    </small>
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="caption" role="heading">
+                            <span class="caption-text">نمونه اسناد</span>
+                        </p>
+                        <ul>
+                            <li class="toctree-l1 current" aria-expanded="false">
+                                <a class="reference internal current" href="{% url 'elements' %}">
+                                    المنت های پایه ای
+                                </a>
+                                <ul>
+                                    <li class="toctree-l2 ">
+                                        <a class="reference internal" href="{% url 'elements' %}">
+                                            ورودی های متن
+                                        </a>
+                                    </li>
+                                    <li class="toctree-l2">
+                                        <a class="reference internal" href="{% url 'multimedia' %}">
+                                            پخش صدا و تصویر
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toctree-l1" aria-expanded="true">
+                                <a class="reference internal " href="{% url 'page1' %}">
+                                    صفحه اول
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toctree-l1" aria-expanded="true">
+                                <a class="reference internal " href="{% url 'page2' %}">
+                                    صفحه دوم
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toctree-l1" aria-expanded="true">
+                                <a class="reference internal " href="{% url 'page3' %}">
+                                    صفحه سوم
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap align-left">
+
+            <!-- mobile-navigation -->
+            {% include "core/include/mobile-navigation.html" %}
+
+            <div class="wy-nav-content">
+                <div class="rst-content">
+
+                    <!-- navigation -->
+                    <div role="navigation" aria-label="Page navigation">
+                        <ul class="wy-breadcrumbs">
+                            <li class="breadcrumb">
+                                <a href="#" class="icon icon-home" aria-label="Home"></a>
+                            </li>
+                            <li class="breadcrumb-item wy-breadcrumbs-extra active ">
+                                پخش صدا و تصویر
+                            </li>
+
+                            <li class="wy-breadcrumbs float-left">
+                                <a href="{% static 'assets/sources/index.rst.txt' %}" rel="nofollow">
+                                    View page source
+                                </a>
+                            </li>
+                        </ul>
+                        <hr/>
+                        <div class="admonition note">
+                            <p class="admonition-title">  نکته</p>
+                            <p class="wy-text-left">
+                                On some systems you may need to use
+                                <code class="docutils literal notranslate">
+                                    <span class="pre">sudo</span>
+                                    <span class="pre">python</span>
+                                    <span class="pre">setup.py</span> <span class="pre">install</span>
+                                </code>
+                                to install peewee system-wide
+                            </p>
+                            <p class="wy-text-right">
+                                یکی از محبوب‌ترین تمپلیت‌های طراحی‌شده برای مستندسازی با ابزار Sphinx است که معمولاً
+                                برای پروژه‌های متن‌باز استفاده می‌شود.
+                                این تمپلیت توسط تیم Read the Docs توسعه یافته و به طور پیش‌فرض در بسیاری از پروژه‌هایی
+                                که از مستندسازی Sphinx استفاده می‌کنند، به کار می‌رود.
+                                در ادامه ویژگی‌های کلیدی این تمپلیت آورده شده است:
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <!-- main -->
+                    <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                        <div itemprop="articleBody">
+
+                            <section id="blocks">
+
+                                <div>
+
+                                    <div class="container">
+                                        <h1>Form Elements - Sphinx RTD Theme</h1>
+                                        <form>
+
+                                            <!-- Video Player -->
+                                            <div class="form-group">
+                                                <label>Video Player:</label>
+                                                <video controls width="100%" height="300">
+                                                    <source src="https://www.w3schools.com/html/mov_bbb.mp4"
+                                                            type="video/mp4">
+                                                    <source src="https://www.w3schools.com/html/mov_bbb.ogg"
+                                                            type="video/ogg">
+                                                    Your browser does not support the video tag.
+                                                </video>
+                                            </div>
+
+                                            <!-- Audio Player -->
+                                            <div class="form-group">
+                                                <label>Audio Player:</label>
+                                                <audio controls>
+                                                    <source src="https://www.w3schools.com/html/horse.mp3"
+                                                            type="audio/mpeg">
+                                                    <source src="https://www.w3schools.com/html/horse.ogg"
+                                                            type="audio/ogg">
+                                                    Your browser does not support the audio tag.
+                                                </audio>
+                                            </div>
+                                        </form>
+                                    </div>
+
+
+                                </div>
+
+                            </section>
+
+                        </div>
+                    </div>
+
+                    <!-- footer-buttons  -->
+                    <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+                        <a href="index.html" class="btn btn-neutral float-left" title="Read the Docs Sphinx Theme"
+                           accesskey="p" rel="prev">
+                            Previous
+                            <span class="fa fa-arrow-circle-left" aria-hidden="true"></span>
+                        </a>
+                        <a href="configuring.html" class="btn btn-neutral float-right" title="Configuration"
+                           accesskey="n" rel="next">
+                            <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
+                            Next
+                        </a>
+                    </div>
+
+                    <!-- footer -->
+                    {% include "core/include/footer.html" %}
+                </div>
+            </div>
+
+        </section>
+    </div>
+{% endblock %}
+
+{% block Javascript %}
+    {% include "core/include/script.html" %}
+{% endblock %}
+
+

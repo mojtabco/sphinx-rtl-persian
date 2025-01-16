@@ -1,0 +1,243 @@
+{% extends "core/layout/base.html" %}
+{% load static %}
+
+{% block ContentPage %}
+    <div class="wy-grid-for-nav ">
+
+        <!-- navbar-side -->
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+            <div class="wy-side-scroll">
+
+                <!-- navbar-side-search -->
+                {% include "core/include/navbar-side-search.html" %}
+
+                <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+                    <p class="caption" role="heading">
+                        <span class="caption-text">منو</span>
+                    </p>
+                    <!-- Local TOC -->
+                    <div class="local-toc">
+                        <ul>
+                            <li class="toctree-l1 ">
+                                <a class="reference internal current" href="{% url 'index' %}">
+                                    صفحه اصلی
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toctree-l1" aria-expanded="true">
+                                <a class="reference internal " href="{% url 'page' %}">
+                                    <small>
+                                        این فقط یک صفحه با عنوان بسیار طولانی برای بررسی نحوه برخورد موضوع با این موقعیت
+                                        ها است
+                                    </small>
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="caption" role="heading">
+                            <span class="caption-text">نمونه اسناد</span>
+                        </p>
+                        <ul>
+                            <li class="toctree-l1 current" aria-expanded="false">
+                                <a class="reference internal current" href="{% url 'elements' %}">
+                                    المنت های پایه ای
+                                </a>
+                                <ul>
+                                    <li class="toctree-l2 ">
+                                        <a class="reference internal" href="{% url 'elements' %}">
+                                            ورودی های متن
+                                        </a>
+                                    </li>
+                                    <li class="toctree-l2">
+                                        <a class="reference internal" href="{% url 'multimedia' %}">
+                                            پخش صدا و تصویر
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toctree-l1" aria-expanded="true">
+                                <a class="reference internal " href="{% url 'page1' %}">
+                                    صفحه اول
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toctree-l1" aria-expanded="true">
+                                <a class="reference internal " href="{% url 'page2' %}">
+                                    صفحه دوم
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toctree-l1" aria-expanded="true">
+                                <a class="reference internal " href="{% url 'page3' %}">
+                                    صفحه سوم
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap align-left">
+
+            <!-- mobile-navigation -->
+            {% include "core/include/mobile-navigation.html" %}
+
+            <div class="wy-nav-content">
+                <div class="rst-content">
+
+                    <!-- navigation -->
+                    <div role="navigation" aria-label="Page navigation">
+                        <ul class="wy-breadcrumbs">
+                            <li class="breadcrumb">
+                                <a href="#" class="icon icon-home" aria-label="Home"></a>
+                            </li>
+                            <li class="breadcrumb-item wy-breadcrumbs-extra active ">
+                                المنت های پایه ای
+                            </li>
+
+                            <li class="wy-breadcrumbs float-left">
+                                <a href="{% static 'assets/sources/index.rst.txt' %}" rel="nofollow">
+                                    View page source
+                                </a>
+                            </li>
+                        </ul>
+                        <hr/>
+                        <div class="admonition note">
+                            <p class="admonition-title">  نکته</p>
+                            <p class="wy-text-left">
+                                On some systems you may need to use
+                                <code class="docutils literal notranslate">
+                                    <span class="pre">sudo</span>
+                                    <span class="pre">python</span>
+                                    <span class="pre">setup.py</span> <span class="pre">install</span>
+                                </code>
+                                to install peewee system-wide
+                            </p>
+                            <p class="wy-text-right">
+                                یکی از محبوب‌ترین تمپلیت‌های طراحی‌شده برای مستندسازی با ابزار Sphinx است که معمولاً
+                                برای پروژه‌های متن‌باز استفاده می‌شود.
+                                این تمپلیت توسط تیم Read the Docs توسعه یافته و به طور پیش‌فرض در بسیاری از پروژه‌هایی
+                                که از مستندسازی Sphinx استفاده می‌کنند، به کار می‌رود.
+                                در ادامه ویژگی‌های کلیدی این تمپلیت آورده شده است:
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <!-- main -->
+                    <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                        <div itemprop="articleBody">
+
+                            <section id="blocks">
+
+                                <div>
+
+                                    <div class="changelist-form-container">
+                                        <h1>نمونه المنت های ورودی</h1>
+                                        <form>
+                                            <!-- Label and Text Input -->
+                                            <div class="form-group">
+                                                <label for="text-input">ورودی اطلاعات :</label>
+                                                <input type="text" id="text-input" name="text-input"
+                                                       class="form-control" placeholder="ورود اطلاعات">
+                                            </div>
+
+                                            <!-- Password Input -->
+                                            <div class="form-group">
+                                                <label for="password-input"> رمزعبور :</label>
+                                                <input type="password" id="password-input" name="password-input"
+                                                       class="form-control" placeholder="رمزعبور وارد کنید">
+                                            </div>
+
+                                            <!-- Textarea -->
+                                            <div class="form-group">
+                                                <label for="textarea">توضیحات :</label>
+                                                <textarea id="textarea" name="textarea" rows="4" class="form-control"
+                                                          placeholder="توضیحات ..."></textarea>
+                                            </div>
+
+                                            <!-- Checkbox -->
+                                            <div class="form-group">
+                                                <label>چک باکس :</label><br>
+                                                <input type="checkbox" id="checkbox1" name="checkbox1">
+                                                <label for="checkbox1">انتخاب اول</label><br>
+                                                <input type="checkbox" id="checkbox2" name="checkbox2">
+                                                <label for="checkbox2">انتخاب دوم</label>
+                                            </div>
+
+                                            <!-- Radio Buttons -->
+                                            <div class="form-group">
+                                                <label>کلید های رادیویی :</label><br>
+                                                <input type="radio" id="radio1" name="radio-group" value="1">
+                                                <label for="radio1">Option 1</label><br>
+                                                <input type="radio" id="radio2" name="radio-group" value="2">
+                                                <label for="radio2">Option 2</label>
+                                            </div>
+
+                                            <!-- Select Dropdown -->
+                                            <div class="form-group">
+                                                <label for="dropdown">انتخای کشویی :</label>
+                                                <select id="dropdown" name="dropdown" class="form-control">
+                                                    <option value="1">شماره 1</option>
+                                                    <option value="2">شماره 2</option>
+                                                    <option value="3">شماره 3</option>
+                                                </select>
+                                            </div>
+
+                                            <!-- File Upload -->
+                                            <div class="form-group">
+                                                <label for="file-upload">بارگذاری فایل :</label>
+                                                <input type="file" id="file-upload" name="file-upload"
+                                                       class="form-control">
+                                            </div>
+
+                                            <!-- Buttons -->
+                                            <div class="form-group wy-text-left">
+                                                <button type="submit" class="btn btn-secondary">ارسال</button>
+                                                <button type="reset" class="btn btn-hover">پاک کردن فرم</button>
+                                            </div>
+                                        </form>
+                                    </div>
+
+
+                                </div>
+
+                            </section>
+
+                        </div>
+                    </div>
+
+                    <!-- footer-buttons  -->
+                    <div class="rst-footer-buttons mt-4" role="navigation" aria-label="Footer">
+                        <a href="index.html" class="btn btn-neutral float-left" title="Read the Docs Sphinx Theme"
+                           accesskey="p" rel="prev">
+                            Previous
+                            <span class="fa fa-arrow-circle-left" aria-hidden="true"></span>
+                        </a>
+                        <a href="configuring.html" class="btn btn-neutral float-right" title="Configuration"
+                           accesskey="n" rel="next">
+                            <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
+                            Next
+                        </a>
+                    </div>
+
+                    <!-- footer -->
+                    {% include "core/include/footer.html" %}
+                </div>
+            </div>
+
+        </section>
+    </div>
+{% endblock %}
+
+{% block Javascript %}
+    {% include "core/include/script.html" %}
+{% endblock %}
+
+

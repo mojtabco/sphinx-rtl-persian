@@ -1,0 +1,332 @@
+{% extends "core/layout/base.html" %}
+{% load static %}
+
+{% block ContentPage %}
+    <div class="wy-grid-for-nav ">
+
+        <!-- navbar-side -->
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+            <div class="wy-side-scroll">
+
+                <!-- navbar-side-search -->
+                {% include "core/include/navbar-side-search.html" %}
+
+                <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+                    <p class="caption" role="heading">
+                        <span class="caption-text">منو</span>
+                    </p>
+                    <!-- Local TOC -->
+                    <div class="local-toc">
+                        <ul>
+                            <li class="toctree-l1 ">
+                                <a class="reference internal current" href="{% url 'index' %}">
+                                    صفحه اصلی
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toctree-l1" aria-expanded="true">
+                                <a class="reference internal " href="{% url 'page' %}">
+                                    <small>
+                                        این فقط یک صفحه با عنوان بسیار طولانی برای بررسی نحوه برخورد موضوع با این موقعیت
+                                        ها است
+                                    </small>
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="caption" role="heading">
+                            <span class="caption-text">نمونه اسناد</span>
+                        </p>
+                        <ul>
+                            <li class="toctree-l1" aria-expanded="true">
+                                <a class="reference internal " href="{% url 'elements' %}">
+                                    <span class="icon fa-plus-square"> </span>
+                                    المنت های پایه ای
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toctree-l1" aria-expanded="true">
+                                <a class="reference internal " href="{% url 'page1' %}">
+                                    صفحه اول
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toctree-l1" aria-expanded="true">
+                                <a class="reference internal " href="{% url 'page2' %}">
+                                    صفحه دوم
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toctree-l1" aria-expanded="true">
+                                <a class="reference internal " href="{% url 'page3' %}">
+                                    صفحه سوم
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap align-left">
+
+            <!-- mobile-navigation -->
+            {% include "core/include/mobile-navigation.html" %}
+
+            <div class="wy-nav-content">
+                <div class="rst-content">
+
+                    <!-- navigation -->
+                    <div role="navigation" aria-label="Page navigation">
+                        <ul class="wy-breadcrumbs">
+                            <li class="breadcrumb">
+                                <a href="#" class="icon icon-home" aria-label="Home"></a>
+                            </li>
+                            <li class="breadcrumb-item wy-breadcrumbs-extra active ">
+                                صفحه اول
+                            </li>
+
+                            <li class="wy-breadcrumbs float-left">
+                                <a href="{% static 'assets/sources/index.rst.txt' %}" rel="nofollow">
+                                    View page source
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- main -->
+                    <div role="main" class="document mt-4" itemscope="itemscope" itemtype="http://schema.org/Article">
+                        <div itemprop="articleBody">
+
+                            <section id="structural-elements">
+                                <h1>
+                                    <a class="toc-backref" href="#id4" role="doc-backlink">
+                                        <span class="section-number">1.  </span>
+                                        ساختار المنت ها
+                                    </a>
+                                    <a class="headerlink" href="#structural-elements" title="Permalink to this heading"> </a>
+
+                                </h1>
+
+                                <nav class="contents " id="table-of-contents">
+                                    <p class="topic-title">جدول محتوا</p>
+                                    <ul class="simple">
+                                        <li>
+                                            <p>
+                                                <a class="reference internal" href="#structural-elements" id="id4">
+                                                    ساختار المنت ها
+                                                </a>
+                                            </p>
+                                            <ul>
+                                                <li>
+                                                    <p>
+                                                        <a class="reference internal" href="#document-section" id="id5">
+                                                            انتخاب اسناد
+                                                        </a>
+                                                    </p>
+                                                    <ul>
+                                                        <li>
+                                                            <p>
+                                                                <a class="reference internal"
+                                                                   href="#document-subsection" id="id6">
+                                                                    زیر مجموعه اسناد
+                                                                </a>
+                                                            </p>
+                                                            <ul>
+                                                                <li>
+                                                                    <p>
+                                                                        <a class="reference internal"
+                                                                           href="#document-subsubsection" id="id7">
+                                                                            زیر مجموعه اسناد
+                                                                        </a>
+                                                                    </p>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <p>
+                                                                                <a class="reference internal"
+                                                                                   href="#document-paragraph" id="id8">
+                                                                                    پاراگراف اسناد
+                                                                                </a>
+                                                                            </p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                <a class="reference internal" href="#structural-elements-2" id="id9">
+                                                    ساختار المنت ها 2
+                                                </a>
+                                            </p>
+                                            <ul>
+                                                <li>
+                                                    <p>
+                                                        <a class="reference internal" href="#id1" id="id10">
+                                                            انتخاب اسناد
+                                                        </a>
+                                                    </p>
+                                                    <ul>
+                                                        <li>
+                                                            <p>
+                                                                <a class="reference internal" href="#id2" id="id11">
+                                                                    زیر مجموعه اسناد
+                                                                </a>
+                                                            </p>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ است. این متن به طور گسترده
+                                    برای پر کردن فضاهای خالی طراحی‌ها استفاده می‌شود. طراحان هنگام کار با متون فارسی، به
+                                    اهمیت راست‌چین شدن محتوا توجه ویژه‌ای دارند، زیرا ساختار نوشتاری زبان فارسی از راست
+                                    به چپ است. تنظیم درست جهت متن نه تنها خوانایی را بهبود می‌بخشد، بلکه به طراحی
+                                    حرفه‌ای‌تر نیز کمک می‌کند.</p>
+                                <hr class="docutils"/>
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ است. این متن به طور گسترده
+                                    برای پر کردن فضاهای خالی طراحی‌ها استفاده می‌شود. طراحان هنگام کار با متون فارسی، به
+                                    اهمیت راست‌چین شدن محتوا توجه ویژه‌ای دارند، زیرا ساختار نوشتاری زبان فارسی از راست
+                                    به چپ است. تنظیم درست جهت متن نه تنها خوانایی را بهبود می‌بخشد، بلکه به طراحی
+                                    حرفه‌ای‌تر نیز کمک می‌کند.</p>
+                                <section id="document-section">
+                                    <h2>
+                                        <a class="toc-backref" href="#id5" role="doc-backlink"><span
+                                                class="section-number">1.1. </span>
+                                            انتخاب اسناد
+                                        </a>
+                                        <a class="headerlink" href="#document-section"
+                                           title="Permalink to this heading"></a>
+                                    </h2>
+                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ است. این متن به طور
+                                        گسترده برای پر کردن فضاهای خالی طراحی‌ها استفاده می‌شود. طراحان هنگام کار با
+                                        متون فارسی، به اهمیت راست‌چین شدن محتوا توجه ویژه‌ای دارند، زیرا ساختار نوشتاری
+                                        زبان فارسی از راست به چپ است. تنظیم درست جهت متن نه تنها خوانایی را بهبود
+                                        می‌بخشد، بلکه به طراحی حرفه‌ای‌تر نیز کمک می‌کند.</p>
+                                    <section id="document-subsection">
+                                        <h3><a class="toc-backref" href="#id6" role="doc-backlink"><span
+                                                class="section-number">1.1.1. </span>زیر مجموعه اسناد</a><a
+                                                class="headerlink" href="#document-subsection"
+                                                title="Permalink to this heading"></a></h3>
+                                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ است. این متن به طور
+                                            گسترده برای پر کردن فضاهای خالی طراحی‌ها استفاده می‌شود. طراحان هنگام کار با
+                                            متون فارسی، به اهمیت راست‌چین شدن محتوا توجه ویژه‌ای دارند، زیرا ساختار
+                                            نوشتاری زبان فارسی از راست به چپ است. تنظیم درست جهت متن نه تنها خوانایی را
+                                            بهبود می‌بخشد، بلکه به طراحی حرفه‌ای‌تر نیز کمک می‌کند.</p>
+                                        <section id="document-subsubsection">
+                                            <h4><a class="toc-backref" href="#id7" role="doc-backlink"><span
+                                                    class="section-number">1.1.1.1. </span>زیر مجموعه اسناد</a><a
+                                                    class="headerlink" href="#document-subsubsection"
+                                                    title="Permalink to this heading"></a></h4>
+                                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ است. این متن به
+                                                طور گسترده برای پر کردن فضاهای خالی طراحی‌ها استفاده می‌شود. طراحان
+                                                هنگام کار با متون فارسی، به اهمیت راست‌چین شدن محتوا توجه ویژه‌ای دارند،
+                                                زیرا ساختار نوشتاری زبان فارسی از راست به چپ است. تنظیم درست جهت متن نه
+                                                تنها خوانایی را بهبود می‌بخشد، بلکه به طراحی حرفه‌ای‌تر نیز کمک
+                                                می‌کند.</p>
+                                            <section id="document-paragraph">
+                                                <h5><a class="toc-backref" href="#id8" role="doc-backlink"><span
+                                                        class="section-number">1.1.1.1.1. </span>
+                                                    پاراگراف اسناد
+                                                </a><a class="headerlink" href="#document-paragraph"
+                                                       title="Permalink to this heading"></a></h5>
+                                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ است. این
+                                                    متن به طور گسترده برای پر کردن فضاهای خالی طراحی‌ها استفاده می‌شود.
+                                                    طراحان هنگام کار با متون فارسی، به اهمیت راست‌چین شدن محتوا توجه
+                                                    ویژه‌ای دارند، زیرا ساختار نوشتاری زبان فارسی از راست به چپ است.
+                                                    تنظیم درست جهت متن نه تنها خوانایی را بهبود می‌بخشد، بلکه به طراحی
+                                                    حرفه‌ای‌تر نیز کمک می‌کند.</p>
+                                            </section>
+                                        </section>
+                                    </section>
+                                </section>
+                            </section>
+                            <section id="structural-elements-2">
+                                <h1><a class="toc-backref" href="#id9" role="doc-backlink"><span class="section-number">2. </span>
+                                    ساختار اسناد
+                                </a><a class="headerlink" href="#structural-elements-2"
+                                       title="Permalink to this heading"></a></h1>
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ است. این متن به طور گسترده
+                                    برای پر کردن فضاهای خالی طراحی‌ها استفاده می‌شود. طراحان هنگام کار با متون فارسی، به
+                                    اهمیت راست‌چین شدن محتوا توجه ویژه‌ای دارند، زیرا ساختار نوشتاری زبان فارسی از راست
+                                    به چپ است. تنظیم درست جهت متن نه تنها خوانایی را بهبود می‌بخشد، بلکه به طراحی
+                                    حرفه‌ای‌تر نیز کمک می‌کند.</p>
+                                <section id="id1">
+                                    <h2><a class="toc-backref" href="#id10" role="doc-backlink"><span
+                                            class="section-number">2.1. </span>انتخاب اسناد</a><a class="headerlink"
+                                                                                                  href="#id1"
+                                                                                                  title="Permalink to this heading"></a>
+                                    </h2>
+                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ است. این متن به طور
+                                        گسترده برای پر کردن فضاهای خالی طراحی‌ها استفاده می‌شود. طراحان هنگام کار با
+                                        متون فارسی، به اهمیت راست‌چین شدن محتوا توجه ویژه‌ای دارند، زیرا ساختار نوشتاری
+                                        زبان فارسی از راست به چپ است. تنظیم درست جهت متن نه تنها خوانایی را بهبود
+                                        می‌بخشد، بلکه به طراحی حرفه‌ای‌تر نیز کمک می‌کند.</p>
+                                    <section id="id2">
+                                        <h3><a class="toc-backref" href="#id11" role="doc-backlink"><span
+                                                class="section-number">2.1.1. </span>زیرمجموعه اسناد</a><a
+                                                class="headerlink" href="#id2" title="Permalink to this heading"></a>
+                                        </h3>
+                                        <figure class="align-right" id="id3" style="width: 200px">
+                                            <img alt="..."
+                                                 src="{% static 'assets/image/defualt/yi_jing_01_chien.jpg' %}"/>
+                                            <figcaption>
+                                                <p>
+                                                    <span class="caption-text">
+                                                   این یک عنوان برای یک شکل است. متن باید دور عنوان بپیچد.
+                                                </span>
+                                                    <a class="headerlink" href="#id3"
+                                                       title="Permalink to this image"></a></p>
+                                            </figcaption>
+                                        </figure>
+                                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ است. این متن به طور
+                                            گسترده برای پر کردن فضاهای خالی طراحی‌ها استفاده می‌شود. طراحان هنگام کار با
+                                            متون فارسی، به اهمیت راست‌چین شدن محتوا توجه ویژه‌ای دارند، زیرا ساختار
+                                            نوشتاری زبان فارسی از راست به چپ است. تنظیم درست جهت متن نه تنها خوانایی را
+                                            بهبود می‌بخشد، بلکه به طراحی حرفه‌ای‌تر نیز کمک می‌کند.</p>
+                                    </section>
+                                </section>
+                            </section>
+
+
+                        </div>
+                    </div>
+
+                    <!-- footer-buttons  -->
+                    <div class="rst-footer-buttons mt-4" role="navigation" aria-label="Footer">
+                        <a href="index.html" class="btn btn-neutral float-left" title="Read the Docs Sphinx Theme"
+                           accesskey="p" rel="prev">
+                            Previous
+                            <span class="fa fa-arrow-circle-left" aria-hidden="true"></span>
+                        </a>
+                        <a href="configuring.html" class="btn btn-neutral float-right" title="Configuration"
+                           accesskey="n" rel="next">
+                            <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
+                            Next
+                        </a>
+                    </div>
+
+                    <!-- footer -->
+                    {% include "core/include/footer.html" %}
+                </div>
+            </div>
+
+        </section>
+    </div>
+{% endblock %}
+
+{% block Javascript %}
+    {% include "core/include/script.html" %}
+{% endblock %}
+
+

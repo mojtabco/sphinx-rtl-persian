@@ -1,0 +1,130 @@
+/* rtl.css */
+
+/* تنظیم جهت کل متن */
+body {
+    direction: rtl;
+    text-align: right;
+}
+
+/*wy-search {*/
+/*    direction: rtl;*/
+/*    text-align: right;*/
+/*    font-family: "Shabnam", sans-serif;*/
+/*    font-weight: 250;*/
+/*}*/
+
+
+/* ترازبندی متن در بخش‌های مختلف */
+.wy-nav-side {
+    text-align: right;
+}
+
+.wy-nav-content-wrap {
+    text-align: right;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.wy-nav-top {
+    text-align: right;
+}
+
+/* فهرست‌ها */
+.wy-menu-vertical ul {
+    padding-right: 20px;
+    list-style-position: inside;
+}
+
+.wy-menu-vertical li {
+    text-align: right;
+}
+
+/* نوار جستجو */
+.wy-side-nav-search input[type="text"] {
+    text-align: right;
+}
+
+/* هدینگ‌ها */
+h1, h2, h3, h4, h5, h6 {
+    text-align: right;
+}
+
+/* لینک‌ها */
+a {
+    text-align: right;
+}
+
+/* پیمایش نان‌برگری (Breadcrumbs) */
+.wy-breadcrumbs {
+    text-align: right;
+}
+
+.wy-breadcrumbs li {
+    display: inline;
+    margin-left: 0.01em;
+    margin-right: 0;
+}
+
+/* بخش پاورقی */
+footer {
+    text-align: right;
+}
+
+/* تنظیم پیش‌فرض برای راست‌چین کردن عناصر شناور */
+div, p, span, ul, li {
+    text-align: right;
+    direction: rtl;
+    font-family: "iransansweb", sans-serif;
+    font-weight: 250;
+
+}
+
+/* کلاس‌های ویژه */
+.local-toc ul {
+    padding-right: 15px;
+}
+
+.icon-home {
+    margin-left: 0;
+    margin-right: 5px;
+    font-size: 100%;
+
+}
+
+/* انتقال نوار کناری به سمت راست */
+.wy-nav-side {
+    right: 0; /* قرار دادن نوار کناری در سمت راست */
+    left: auto; /* حذف مقدار پیش‌فرض سمت چپ */
+    position: fixed; /* ثابت کردن نوار کناری هنگام اسکرول */
+    height: 100%; /* پر کردن ارتفاع صفحه */
+    /*width: 250px; !* عرض نوار کناری *!*/
+    background-color: #343131; /* رنگ پس‌زمینه اختیاری */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* سایه برای جلوه بهتر */
+    text-align: right; /* متن داخل نوار کناری راست‌چین */
+}
+
+/* تنظیم محتوای اصلی به سمت چپ */
+.wy-nav-content-wrap {
+    margin-right: 300px; /* فضای کافی برای نوار کناری */
+    margin-left: 0; /* حذف فضای سمت چپ */
+    direction: rtl; /* اطمینان از راست‌چین بودن محتوا */
+}
+
+/* جستجو در نوار کناری */
+.wy-side-nav-search input[type="text"] {
+    text-align: right;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+/* لینک‌ها در نوار کناری */
+.wy-menu-vertical ul {
+    padding: 0;
+    list-style: none;
+}
+
+.wy-menu-vertical li {
+    text-align: right;
+    margin-bottom: 10px;
+}

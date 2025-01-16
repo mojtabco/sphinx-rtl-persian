@@ -1,0 +1,1654 @@
+{% extends "core/layout/base.html" %}
+{% load static %}
+
+{% block ContentPage %}
+    <div class="wy-grid-for-nav ">
+
+        <!-- navbar-side -->
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+            <div class="wy-side-scroll">
+
+                <!-- navbar-side-search -->
+                {% include "core/include/navbar-side-search.html" %}
+
+                <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+                    <p class="caption" role="heading">
+                        <span class="caption-text">منو</span>
+                    </p>
+                    <!-- Local TOC -->
+                    <div class="local-toc">
+                        <ul>
+                            <li class="toctree-l1 ">
+                                <a class="reference internal current" href="{% url 'index' %}">
+                                    صفحه اصلی
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toctree-l1" aria-expanded="true">
+                                <a class="reference internal " href="{% url 'page' %}">
+                                    <small>
+                                        این فقط یک صفحه با عنوان بسیار طولانی برای بررسی نحوه برخورد موضوع با این موقعیت
+                                        ها است
+                                    </small>
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="caption" role="heading">
+                            <span class="caption-text">نمونه اسناد</span>
+                        </p>
+                        <ul>
+                            <li class="toctree-l1" aria-expanded="true">
+                                <a class="reference internal " href="{% url 'elements' %}">
+                                    <span class="icon fa-plus-square"> </span>
+                                    المنت های پایه ای
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toctree-l1" aria-expanded="true">
+                                <a class="reference internal " href="{% url 'page1' %}">
+                                    صفحه اول
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toctree-l1" aria-expanded="true">
+                                <a class="reference internal " href="{% url 'page2' %}">
+                                    صفحه دوم
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toctree-l1" aria-expanded="true">
+                                <a class="reference internal " href="{% url 'page3' %}">
+                                    صفحه سوم
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap align-left">
+
+            <!-- mobile-navigation -->
+            {% include "core/include/mobile-navigation.html" %}
+
+            <div class="wy-nav-content">
+                <div class="rst-content">
+
+                    <!-- navigation -->
+                    <div role="navigation" aria-label="Page navigation">
+                        <ul class="wy-breadcrumbs">
+                            <li class="breadcrumb">
+                                <a href="#" class="icon icon-home" aria-label="Home"></a>
+                            </li>
+                            <li class="breadcrumb-item wy-breadcrumbs-extra active ">
+                                 صفحه سوم
+                            </li>
+
+                            <li class="wy-breadcrumbs float-left">
+                                <a href="{% static 'assets/sources/index.rst.txt' %}" rel="nofollow">
+                                    View page source
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- main -->
+                    <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article"
+                         dir="auto">
+                        <div itemprop="articleBody" dir="auto">
+
+                            <section id="lists-tables" dir="auto">
+                                <h1 dir="auto"><a class="toc-backref" href="#id17" role="doc-backlink" dir="auto"><span
+                                        class="section-number" dir="auto"><font style="vertical-align: inherit;"><font
+                                        style="vertical-align: inherit;">4.</font></font></span><font
+                                        style="vertical-align: inherit;"><font style="vertical-align: inherit;"> فهرست
+                                    ها و جداول</font></font></a><a class="headerlink" href="#lists-tables"
+                                                                   title="پیوند دائمی به این عنوان" dir="auto"><font
+                                        style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></a>
+                                </h1>
+                                <nav class="contents" id="table-of-contents" dir="auto">
+                                    <p class="topic-title" dir="auto"><font style="vertical-align: inherit;"><font
+                                            style="vertical-align: inherit;">فهرست مطالب</font></font></p>
+                                    <ul class="simple" dir="auto">
+                                        <li dir="auto"><p dir="auto"><a class="reference internal" href="#lists-tables"
+                                                                        id="id17" dir="auto"><font
+                                                style="vertical-align: inherit;"><font style="vertical-align: inherit;">لیست
+                                            ها و جداول</font></font></a></p>
+                                            <ul dir="auto">
+                                                <li dir="auto"><p dir="auto"><a class="reference internal" href="#lists"
+                                                                                id="id18" dir="auto"><font
+                                                        style="vertical-align: inherit;"><font
+                                                        style="vertical-align: inherit;">لیست ها</font></font></a></p>
+                                                    <ul dir="auto">
+                                                        <li dir="auto"><p dir="auto"><a class="reference internal"
+                                                                                        href="#enumerated-lists"
+                                                                                        id="id19" dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">لیست های شمارش
+                                                            شده</font></font></a></p></li>
+                                                        <li dir="auto"><p dir="auto"><a class="reference internal"
+                                                                                        href="#definition-lists"
+                                                                                        id="id20" dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">لیست های
+                                                            تعریف</font></font></a></p></li>
+                                                        <li dir="auto"><p dir="auto"><a class="reference internal"
+                                                                                        href="#option-lists" id="id21"
+                                                                                        dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">لیست های
+                                                            گزینه</font></font></a></p></li>
+                                                        <li dir="auto"><p dir="auto"><a class="reference internal"
+                                                                                        href="#field-list" id="id22"
+                                                                                        dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">لیست
+                                                            زمینه</font></font></a></p></li>
+                                                        <li dir="auto"><p dir="auto"><a class="reference internal"
+                                                                                        href="#bullet-lists" id="id23"
+                                                                                        dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">لیست های
+                                                            گلوله</font></font></a></p>
+                                                            <ul dir="auto">
+                                                                <li dir="auto"><p dir="auto"><a
+                                                                        class="reference internal" href="#simple"
+                                                                        id="id24" dir="auto"><font
+                                                                        style="vertical-align: inherit;"><font
+                                                                        style="vertical-align: inherit;">ساده</font></font></a>
+                                                                </p></li>
+                                                                <li dir="auto"><p dir="auto"><a
+                                                                        class="reference internal" href="#complex"
+                                                                        id="id25" dir="auto"><font
+                                                                        style="vertical-align: inherit;"><font
+                                                                        style="vertical-align: inherit;">مجتمع</font></font></a>
+                                                                </p></li>
+                                                                <li dir="auto"><p dir="auto"><a
+                                                                        class="reference internal"
+                                                                        href="#second-list-level" id="id26"
+                                                                        dir="auto"><font
+                                                                        style="vertical-align: inherit;"><font
+                                                                        style="vertical-align: inherit;">سطح فهرست
+                                                                    دوم</font></font></a></p>
+                                                                    <ul dir="auto">
+                                                                        <li dir="auto"><p dir="auto"><a
+                                                                                class="reference internal"
+                                                                                href="#but-deeper-down-the-rabbit-hole"
+                                                                                id="id27" dir="auto"><font
+                                                                                style="vertical-align: inherit;"><font
+                                                                                style="vertical-align: inherit;">اما
+                                                                            عمیق تر از سوراخ خرگوش</font></font></a></p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li dir="auto"><p dir="auto"><a class="reference internal"
+                                                                                        href="#hlists" id="id28"
+                                                                                        dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">Hlists</font></font></a>
+                                                        </p></li>
+                                                        <li dir="auto"><p dir="auto"><a class="reference internal"
+                                                                                        href="#numbered-list" id="id29"
+                                                                                        dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">لیست شماره گذاری
+                                                            شده</font></font></a></p></li>
+                                                    </ul>
+                                                </li>
+                                                <li dir="auto"><p dir="auto"><a class="reference internal"
+                                                                                href="#tables" id="id30"
+                                                                                dir="auto"><font
+                                                        style="vertical-align: inherit;"><font
+                                                        style="vertical-align: inherit;">جداول</font></font></a></p>
+                                                    <ul dir="auto">
+                                                        <li dir="auto"><p dir="auto"><a class="reference internal"
+                                                                                        href="#grid-tables" id="id31"
+                                                                                        dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">جداول
+                                                            توری</font></font></a></p>
+                                                            <ul dir="auto">
+                                                                <li dir="auto"><p dir="auto"><a
+                                                                        class="reference internal" href="#giant-tables"
+                                                                        id="id32" dir="auto"><font
+                                                                        style="vertical-align: inherit;"><font
+                                                                        style="vertical-align: inherit;">میزهای غول
+                                                                    پیکر</font></font></a></p></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li dir="auto"><p dir="auto"><a class="reference internal"
+                                                                                        href="#list-tables" id="id33"
+                                                                                        dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">لیست
+                                                            جداول</font></font></a></p></li>
+                                                        <li dir="auto"><p dir="auto"><a class="reference internal"
+                                                                                        href="#tables-with-paragraphs"
+                                                                                        id="id34" dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">جداول با
+                                                            پاراگراف</font></font></a></p></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <section id="lists" dir="auto">
+                                    <h2 dir="auto"><a class="toc-backref" href="#id18" role="doc-backlink"
+                                                      dir="auto"><span class="section-number" dir="auto"><font
+                                            style="vertical-align: inherit;"><font
+                                            style="vertical-align: inherit;">4.1.</font></font></span><font
+                                            style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                        لیست ها</font></font></a><a class="headerlink" href="#lists"
+                                                                    title="پیوند دائمی به این عنوان" dir="auto"><font
+                                            style="vertical-align: inherit;"><font
+                                            style="vertical-align: inherit;"></font></font></a></h2>
+                                    <section id="enumerated-lists" dir="auto">
+                                        <h3 dir="auto"><a class="toc-backref" href="#id19" role="doc-backlink"
+                                                          dir="auto"><span class="section-number" dir="auto"><font
+                                                style="vertical-align: inherit;"><font style="vertical-align: inherit;">4.1.1.</font></font></span><font
+                                                style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            لیست های شمارش شده</font></font></a><a class="headerlink"
+                                                                                   href="#enumerated-lists"
+                                                                                   title="پیوند دائمی به این عنوان"
+                                                                                   dir="auto"><font
+                                                style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></a>
+                                        </h3>
+                                        <ol class="arabic" dir="auto">
+                                            <li dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">اعداد عربی</font></font></p>
+                                                <ol class="loweralpha simple" dir="auto">
+                                                    <li dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">آلفای پایین)</font></font>
+                                                    </p>
+                                                        <ol class="lowerroman simple" dir="auto">
+                                                            <li dir="auto"><p dir="auto"><font
+                                                                    style="vertical-align: inherit;"><font
+                                                                    style="vertical-align: inherit;">(روم پایین)</font></font>
+                                                            </p>
+                                                                <ol class="upperalpha simple" dir="auto">
+                                                                    <li dir="auto"><p dir="auto"><font
+                                                                            style="vertical-align: inherit;"><font
+                                                                            style="vertical-align: inherit;">آلفای
+                                                                        بالایی</font></font></p>
+                                                                        <ol class="upperroman simple" dir="auto">
+                                                                            <li dir="auto"><p dir="auto"><font
+                                                                                    style="vertical-align: inherit;"><font
+                                                                                    style="vertical-align: inherit;">روم
+                                                                                بالایی)</font></font></p></li>
+                                                                        </ol>
+                                                                    </li>
+                                                                </ol>
+                                                            </li>
+                                                        </ol>
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                            <li dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">لیست هایی که از 1 شروع نمی
+                                                شوند:</font></font></p>
+                                                <ol class="arabic simple" start="3" dir="auto">
+                                                    <li dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">سه</font></font></p></li>
+                                                    <li dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">چهار</font></font></p></li>
+                                                </ol>
+                                                <ol class="upperalpha simple" start="3" dir="auto">
+                                                    <li dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">سی</font></font></p></li>
+                                                    <li dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">D</font></font></p></li>
+                                                </ol>
+                                                <ol class="lowerroman simple" start="3" dir="auto">
+                                                    <li dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">III</font></font></p></li>
+                                                    <li dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">IV</font></font></p></li>
+                                                </ol>
+                                            </li>
+                                            <li dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">موارد فهرست نیز ممکن است به صورت
+                                                خودکار شمارش شوند.</font></font></p></li>
+                                        </ol>
+                                    </section>
+                                    <section id="definition-lists" dir="auto">
+                                        <h3 dir="auto"><a class="toc-backref" href="#id20" role="doc-backlink"
+                                                          dir="auto"><span class="section-number" dir="auto"><font
+                                                style="vertical-align: inherit;"><font style="vertical-align: inherit;">4.1.2.</font></font></span><font
+                                                style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            لیست های تعریف</font></font></a><a class="headerlink"
+                                                                               href="#definition-lists"
+                                                                               title="پیوند دائمی به این عنوان"
+                                                                               dir="auto"><font
+                                                style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></a>
+                                        </h3>
+                                        <dl dir="auto">
+                                            <dt dir="auto"><font style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">مدت</font></font></dt>
+                                            <dd dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">تعریف</font></font></p>
+                                            </dd>
+                                            <dt dir="auto"><font style="vertical-align: inherit;"><span
+                                                    class="classifier" dir="auto"><font
+                                                    style="vertical-align: inherit;">طبقه بندی</font></span><font
+                                                    style="vertical-align: inherit;"> اصطلاحات</font></font><span
+                                                    class="classifier" dir="auto"><font
+                                                    style="vertical-align: inherit;"></font></span></dt>
+                                            <dd dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">تعریف بند 1.</font></font></p>
+                                                <p dir="auto"><font style="vertical-align: inherit;"><font
+                                                        style="vertical-align: inherit;">تعریف بند 2.</font></font></p>
+                                            </dd>
+                                            <dt dir="auto"><font style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">مدت</font></font></dt>
+                                            <dd dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">تعریف</font></font></p>
+                                            </dd>
+                                        </dl>
+                                        <p dir="auto"><font style="vertical-align: inherit;"><font
+                                                style="vertical-align: inherit;">من نمی دانم چرا لیست تعریف زیر به عنوان
+                                            سبک متفاوتی از لیست تعریف طبقه بندی شده است.</font></font></p>
+                                        <dl class="simple" dir="auto">
+                                            <dt dir="auto"><font style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">آیا این فضاها در اصطلاح است؟</font></font>
+                                            </dt>
+                                            <dd dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">شاید این پاراگراف چند خطی در خط زیر
+                                                بود که باعث این شد؟</font></font></p>
+                                            </dd>
+                                            <dt dir="auto"><font style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">آیا ممکن است پاراگراف بالای لیست
+                                                باشد؟</font></font></dt>
+                                            <dd dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">حدس می‌زنم بسیاری از این فهرست‌ها
+                                                پاراگراف اصلی ندارند؟</font></font></p>
+                                            </dd>
+                                            <dt dir="auto"><font style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">آیا همه چیز به یکباره
+                                                است؟</font></font></dt>
+                                            <dd dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">کی میدونه؟!</font></font></p>
+                                            </dd>
+                                        </dl>
+                                    </section>
+                                    <section id="option-lists" dir="auto">
+                                        <h3 dir="auto"><a class="toc-backref" href="#id21" role="doc-backlink"
+                                                          dir="auto"><span class="section-number" dir="auto"><font
+                                                style="vertical-align: inherit;"><font style="vertical-align: inherit;">4.1.3.</font></font></span><font
+                                                style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            لیست های گزینه</font></font></a><a class="headerlink" href="#option-lists"
+                                                                               title="پیوند دائمی به این عنوان"
+                                                                               dir="auto"><font
+                                                style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></a>
+                                        </h3>
+                                        <p dir="auto"><font style="vertical-align: inherit;"><font
+                                                style="vertical-align: inherit;">برای فهرست کردن گزینه های خط
+                                            فرمان:</font></font></p>
+                                        <dl class="option-list" dir="auto">
+                                            <dt dir="auto"><kbd dir="auto"><span class="option"
+                                                                                 dir="auto">-a</span></kbd></dt>
+                                            <dd dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">گزینه خط فرمان "a"</font></font>
+                                            </p>
+                                            </dd>
+                                            <dt dir="auto"><kbd dir="auto"><span class="option" dir="auto">-b <var
+                                                    dir="auto">file</var></span></kbd></dt>
+                                            <dd dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">گزینه ها می توانند استدلال و
+                                                توضیحات طولانی داشته باشند</font></font></p>
+                                            </dd>
+                                            <dt dir="auto"><kbd dir="auto"><span class="option" dir="auto">--long</span></kbd>
+                                            </dt>
+                                            <dd dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">گزینه ها نیز می توانند طولانی
+                                                باشند</font></font></p>
+                                            </dd>
+                                            <dt dir="auto"><kbd dir="auto"><span class="option" dir="auto">--input=<var
+                                                    dir="auto">file</var></span></kbd></dt>
+                                            <dd dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">گزینه های طولانی نیز می توانند
+                                                استدلال داشته باشند</font></font></p>
+                                            </dd>
+                                            <dt dir="auto"><kbd dir="auto"><span class="option" dir="auto">--very-long-option</span></kbd>
+                                            </dt>
+                                            <dd dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">توضیحات همچنین می تواند از خط بعدی
+                                                شروع شود.</font></font></p>
+                                                <p dir="auto"><font style="vertical-align: inherit;"><font
+                                                        style="vertical-align: inherit;">توضیحات ممکن است شامل چندین
+                                                    عنصر بدنه باشد، صرف نظر از اینکه از کجا شروع می شود.</font></font>
+                                                </p>
+                                            </dd>
+                                            <dt dir="auto"><kbd dir="auto"><span class="option" dir="auto">-x</span>,
+                                                <span class="option" dir="auto">-y</span>, <span class="option"
+                                                                                                 dir="auto">-z</span></kbd>
+                                            </dt>
+                                            <dd dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">گزینه های متعدد یک "گروه گزینه"
+                                                هستند.</font></font></p>
+                                            </dd>
+                                            <dt dir="auto"><kbd dir="auto"><span class="option" dir="auto">-v</span>,
+                                                <span class="option" dir="auto">--verbose</span></kbd></dt>
+                                            <dd dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">معمولا دیده می شود: گزینه های کوتاه
+                                                و بلند.</font></font></p>
+                                            </dd>
+                                            <dt dir="auto"><kbd dir="auto"><span class="option" dir="auto">-1 <var
+                                                    dir="auto">file</var></span>, <span class="option" dir="auto">--one=<var
+                                                    dir="auto">file</var></span>, <span class="option" dir="auto">--two <var
+                                                    dir="auto">file</var></span></kbd></dt>
+                                            <dd dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">گزینه های متعدد با
+                                                آرگومان</font></font></p>
+                                            </dd>
+                                            <dt dir="auto"><kbd dir="auto"><span class="option"
+                                                                                 dir="auto">/V</span></kbd></dt>
+                                            <dd dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">گزینه های به سبک DOS/VMS نیز</font></font>
+                                            </p>
+                                            </dd>
+                                        </dl>
+                                        <p dir="auto"><font style="vertical-align: inherit;"><font
+                                                style="vertical-align: inherit;">بین گزینه و توضیحات باید حداقل دو فاصله
+                                            وجود داشته باشد.</font></font></p>
+                                    </section>
+
+                                    <section id="bullet-lists" dir="auto">
+                                        <h3 dir="auto"><a class="toc-backref" href="#id23" role="doc-backlink"
+                                                          dir="auto"><span class="section-number" dir="auto"><font
+                                                style="vertical-align: inherit;"><font style="vertical-align: inherit;">4.1.5.</font></font></span><font
+                                                style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            لیست های گلوله</font></font></a><a class="headerlink" href="#bullet-lists"
+                                                                               title="پیوند دائمی به این عنوان"
+                                                                               dir="auto"><font
+                                                style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></a>
+                                        </h3>
+                                        <section id="simple" dir="auto">
+                                            <h4 dir="auto"><a class="toc-backref" href="#id24" role="doc-backlink"
+                                                              dir="auto"><span class="section-number" dir="auto"><font
+                                                    style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">4.1.5.1.</font></font></span><font
+                                                    style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;"> ساده</font></font></a><a
+                                                    class="headerlink" href="#simple" title="پیوند دائمی به این عنوان"
+                                                    dir="auto"><font style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;"></font></font></a></h4>
+                                            <ul class="simple" dir="auto">
+                                                <li dir="auto"><p dir="auto"><font
+                                                        style="vertical-align: inherit;"><font
+                                                        style="vertical-align: inherit;">یک لیست ساده</font></font></p>
+                                                </li>
+                                                <li dir="auto"><p dir="auto"><font
+                                                        style="vertical-align: inherit;"><font
+                                                        style="vertical-align: inherit;">هیچ حاشیه ای بین موارد لیست
+                                                    وجود ندارد.</font></font></p></li>
+                                                <li dir="auto"><p dir="auto"><font
+                                                        style="vertical-align: inherit;"><font
+                                                        style="vertical-align: inherit;">لیست های ساده شامل چند پاراگراف
+                                                    نیستند. این یک لیست پیچیده است.</font></font></p></li>
+                                                <li dir="auto"><p dir="auto"><font
+                                                        style="vertical-align: inherit;"><font
+                                                        style="vertical-align: inherit;">در مورد لیست تو در
+                                                    تو</font></font></p>
+                                                    <ul dir="auto">
+                                                        <li dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">هیچ حاشیه ای بین عناصر
+                                                            وجود ندارد</font></font></p>
+                                                            <ul dir="auto">
+                                                                <li dir="auto"><p dir="auto"><font
+                                                                        style="vertical-align: inherit;"><font
+                                                                        style="vertical-align: inherit;">هنوز هیچ حاشیه
+                                                                    ای وجود ندارد</font></font></p>
+                                                                    <ul dir="auto">
+                                                                        <li dir="auto"><p dir="auto"><font
+                                                                                style="vertical-align: inherit;"><font
+                                                                                style="vertical-align: inherit;">هنوز
+                                                                            هیچ حاشیه ای وجود ندارد</font></font></p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                        <section id="complex" dir="auto">
+                                            <h4 dir="auto"><a class="toc-backref" href="#id25" role="doc-backlink"
+                                                              dir="auto"><span class="section-number" dir="auto"><font
+                                                    style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">4.1.5.2.</font></font></span><font
+                                                    style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;"> مجتمع</font></font></a><a
+                                                    class="headerlink" href="#complex" title="پیوند دائمی به این عنوان"
+                                                    dir="auto"><font style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;"></font></font></a></h4>
+                                            <ul dir="auto">
+                                                <li dir="auto"><p dir="auto"><font
+                                                        style="vertical-align: inherit;"><font
+                                                        style="vertical-align: inherit;">لیست گلوله ای</font></font></p>
+                                                    <ul class="simple" dir="auto">
+                                                        <li dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">لیست گلوله های تو در
+                                                            تو.</font></font></p></li>
+                                                        <li dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">مورد تو در تو 2.</font></font>
+                                                        </p></li>
+                                                    </ul>
+                                                </li>
+                                                <li dir="auto"><p dir="auto"><font
+                                                        style="vertical-align: inherit;"><font
+                                                        style="vertical-align: inherit;">مورد 2.</font></font></p>
+                                                    <p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">بند 2 از بند
+                                                        2.</font></font></p>
+                                                    <ul class="simple" dir="auto">
+                                                        <li dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">لیست گلوله های تو در
+                                                            تو.</font></font></p></li>
+                                                        <li dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">مورد تو در تو 2.</font></font>
+                                                        </p>
+                                                            <ul dir="auto">
+                                                                <li dir="auto"><p dir="auto"><font
+                                                                        style="vertical-align: inherit;"><font
+                                                                        style="vertical-align: inherit;">سطح سوم.</font></font>
+                                                                </p></li>
+                                                                <li dir="auto"><p dir="auto"><font
+                                                                        style="vertical-align: inherit;"><font
+                                                                        style="vertical-align: inherit;">مورد 2.</font></font>
+                                                                </p></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">مورد تو در تو 3.</font></font>
+                                                        </p></li>
+                                                    </ul>
+                                                </li>
+                                                <li dir="auto"><p dir="auto"><code class="docutils literal notranslate"
+                                                                                   dir="auto"><span class="pre"
+                                                                                                    dir="auto">inline</span>
+                                                    <span class="pre" dir="auto">literall</span></code></p></li>
+                                                <li dir="auto"><p dir="auto"><code class="docutils literal notranslate"
+                                                                                   dir="auto"><span class="pre"
+                                                                                                    dir="auto">inline</span>
+                                                    <span class="pre" dir="auto">literall</span></code></p></li>
+                                                <li dir="auto"><p dir="auto"><code class="docutils literal notranslate"
+                                                                                   dir="auto"><span class="pre"
+                                                                                                    dir="auto">inline</span>
+                                                    <span class="pre" dir="auto">literall</span></code></p></li>
+                                                <li dir="auto"><p dir="auto"><font
+                                                        style="vertical-align: inherit;"><font
+                                                        style="vertical-align: inherit;">این مورد چندین پاراگراف
+                                                    دارد.</font></font></p>
+                                                    <p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">این مورد چندین پاراگراف
+                                                        دارد.</font></font></p>
+                                                </li>
+                                                <li dir="auto"><p dir="auto"><font
+                                                        style="vertical-align: inherit;"><font
+                                                        style="vertical-align: inherit;">این مورد چندین پاراگراف
+                                                    دارد.</font></font></p>
+                                                    <p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">این مورد چندین پاراگراف
+                                                        دارد.</font></font></p>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                        <section id="second-list-level" dir="auto">
+                                            <h4 dir="auto"><a class="toc-backref" href="#id26" role="doc-backlink"
+                                                              dir="auto"><span class="section-number" dir="auto"><font
+                                                    style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">4.1.5.3.</font></font></span><font
+                                                    style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;"> سطح فهرست دوم</font></font></a><a
+                                                    class="headerlink" href="#second-list-level"
+                                                    title="پیوند دائمی به این عنوان" dir="auto"><font
+                                                    style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;"></font></font></a></h4>
+                                            <ul dir="auto">
+                                                <li dir="auto"><p dir="auto"><font
+                                                        style="vertical-align: inherit;"><font
+                                                        style="vertical-align: inherit;">در اینجا لیستی در بخش سطح دوم
+                                                    وجود دارد.</font></font></p></li>
+                                                <li dir="auto"><p dir="auto"><a class="reference external"
+                                                                                href="http://www.yahoo.com"
+                                                                                dir="auto"><font
+                                                        style="vertical-align: inherit;"><font
+                                                        style="vertical-align: inherit;">یاهو</font></font></a></p></li>
+                                                <li dir="auto"><p dir="auto"><a class="reference external"
+                                                                                href="http://www.yahoo.com"
+                                                                                dir="auto"><font
+                                                        style="vertical-align: inherit;"><font
+                                                        style="vertical-align: inherit;">یاهو</font></font></a></p>
+                                                    <ul dir="auto">
+                                                        <li dir="auto"><p dir="auto"><a class="reference external"
+                                                                                        href="http://www.yahoo.com"
+                                                                                        dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">یاهو</font></font></a>
+                                                        </p></li>
+                                                        <li dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">اینجا یک گلوله داخلی
+                                                            است</font></font><code class="docutils literal notranslate"
+                                                                                   dir="auto"><span class="pre"
+                                                                                                    dir="auto">oh</span></code>
+                                                        </p>
+                                                            <ul dir="auto">
+                                                                <li dir="auto"><p dir="auto"><font
+                                                                        style="vertical-align: inherit;"><font
+                                                                        style="vertical-align: inherit;">یکی
+                                                                    دیگر </font><font
+                                                                        style="vertical-align: inherit;">. </font><a
+                                                                        class="reference external"
+                                                                        href="http://www.yahoo.com" dir="auto"><font
+                                                                        style="vertical-align: inherit;">یاهو</font></a></font><code
+                                                                        class="docutils literal notranslate" dir="auto"><span
+                                                                        class="pre" dir="auto">with</span> <span
+                                                                        class="pre" dir="auto">an</span> <span
+                                                                        class="pre" dir="auto">inline</span> <span
+                                                                        class="pre"
+                                                                        dir="auto">literally</span></code><font
+                                                                        style="vertical-align: inherit;"></font><a
+                                                                        class="reference external"
+                                                                        href="http://www.yahoo.com" dir="auto"><font
+                                                                        style="vertical-align: inherit;"></font></a></p>
+                                                                    <p dir="auto"><font
+                                                                            style="vertical-align: inherit;"><font
+                                                                            style="vertical-align: inherit;">هه هه کودک
+                                                                        سعی کنید این جاسازی را شکست دهید:</font></font>
+                                                                    </p>
+
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">و
+                                                            دیگری </font></font><a class="reference external"
+                                                                                   href="http://www.yahoo.com"
+                                                                                   dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">یاهو</font></font></a>
+                                                        </p></li>
+                                                        <li dir="auto"><p dir="auto"><a class="reference external"
+                                                                                        href="http://www.yahoo.com"
+                                                                                        dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">یاهو</font></font></a>
+                                                        </p></li>
+                                                        <li dir="auto"><p dir="auto"><code
+                                                                class="docutils literal notranslate" dir="auto"><span
+                                                                class="pre" dir="auto">hi</span></code></p></li>
+                                                    </ul>
+                                                </li>
+                                                <li dir="auto"><p dir="auto"><font
+                                                        style="vertical-align: inherit;"><font
+                                                        style="vertical-align: inherit;">یک پند چطور؟</font></font></p>
+                                                    <div class="admonition note" dir="auto">
+                                                        <p class="admonition-title" dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">توجه داشته باشید</font></font>
+                                                        </p>
+                                                        <p dir="auto"><font style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">این یک یادداشت تو در تو
+                                                            در یک لیست است.</font></font></p>
+                                                    </div>
+                                                </li>
+                                                <li dir="auto"><p dir="auto"><font
+                                                        style="vertical-align: inherit;"><font
+                                                        style="vertical-align: inherit;">و هه</font></font></p></li>
+                                            </ul>
+                                            <section id="but-deeper-down-the-rabbit-hole" dir="auto">
+                                                <h5 dir="auto"><a class="toc-backref" href="#id27" role="doc-backlink"
+                                                                  dir="auto"><span class="section-number"
+                                                                                   dir="auto"><font
+                                                        style="vertical-align: inherit;"><font
+                                                        style="vertical-align: inherit;">4.1.5.3.1.</font></font></span><font
+                                                        style="vertical-align: inherit;"><font
+                                                        style="vertical-align: inherit;"> اما عمیق تر از سوراخ
+                                                    خرگوش</font></font></a><a class="headerlink"
+                                                                              href="#but-deeper-down-the-rabbit-hole"
+                                                                              title="پیوند دائمی به این عنوان"
+                                                                              dir="auto"><font
+                                                        style="vertical-align: inherit;"><font
+                                                        style="vertical-align: inherit;"></font></font></a></h5>
+                                                <ul class="simple" dir="auto">
+                                                    <li dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">من مدام می گفتم: "عمیق تر
+                                                        از سوراخ خرگوش". </font></font><a class="reference external"
+                                                                                          href="http://www.yahoo.com"
+                                                                                          dir="auto"><font
+                                                            style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">یاهو</font></font></a></p>
+                                                        <ul dir="auto">
+                                                            <li dir="auto"><p dir="auto"><font
+                                                                    style="vertical-align: inherit;"><font
+                                                                    style="vertical-align: inherit;">شبا قلقلک
+                                                                میدم </font></font><a class="reference external"
+                                                                                      href="http://www.yahoo.com"
+                                                                                      dir="auto"><font
+                                                                    style="vertical-align: inherit;"><font
+                                                                    style="vertical-align: inherit;">یاهو</font></font></a><font
+                                                                    style="vertical-align: inherit;"><font
+                                                                    style="vertical-align: inherit;"> .</font></font>
+                                                            </p></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">من اینجا در GZ خیلی تنها
+                                                        هستم</font></font><code class="docutils literal notranslate"
+                                                                                dir="auto"><span class="pre" dir="auto">guangzhou</span></code>
+                                                    </p></li>
+                                                    <li dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">مردی با سرنوشت، امیدها و
+                                                        رویاهای پیتون. </font></font><a class="reference external"
+                                                                                        href="http://www.yahoo.com"
+                                                                                        dir="auto"><font
+                                                            style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">یاهو</font></font></a></p>
+                                                        <ul dir="auto">
+                                                            <li dir="auto"><p dir="auto"><a class="reference external"
+                                                                                            href="http://www.yahoo.com"
+                                                                                            dir="auto"><font
+                                                                    style="vertical-align: inherit;"><font
+                                                                    style="vertical-align: inherit;">یاهو</font></font></a>
+                                                            </p>
+                                                                <ul dir="auto">
+                                                                    <li dir="auto"><p dir="auto"><a
+                                                                            class="reference external"
+                                                                            href="http://www.yahoo.com" dir="auto"><font
+                                                                            style="vertical-align: inherit;"><font
+                                                                            style="vertical-align: inherit;">یاهو</font></font></a>
+                                                                        <code class="docutils literal notranslate"
+                                                                              dir="auto"><span class="pre"
+                                                                                               dir="auto">hi</span></code>
+                                                                    </p></li>
+                                                                    <li dir="auto"><p dir="auto"><code
+                                                                            class="docutils literal notranslate"
+                                                                            dir="auto"><span class="pre" dir="auto">destiny</span></code>
+                                                                    </p></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </section>
+                                        </section>
+                                    </section>
+                                    <section id="hlists" dir="auto">
+                                        <h3 dir="auto"><a class="toc-backref" href="#id28" role="doc-backlink"
+                                                          dir="auto"><span class="section-number" dir="auto"><font
+                                                style="vertical-align: inherit;"><font style="vertical-align: inherit;">4.1.6.</font></font></span><font
+                                                style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            Hlists</font></font></a><a class="headerlink" href="#hlists"
+                                                                       title="پیوند دائمی به این عنوان" dir="auto"><font
+                                                style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></a>
+                                        </h3>
+                                        <table class="hlist" dir="auto">
+                                            <tbody dir="auto">
+                                            <tr dir="auto">
+                                                <td dir="auto">
+                                                    <ul class="simple" dir="auto">
+                                                        <li dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">مورد اول</font></font>
+                                                        </p></li>
+                                                        <li dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">مورد دوم</font></font>
+                                                        </p></li>
+                                                        <li dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">مورد سوم</font></font>
+                                                        </p></li>
+                                                    </ul>
+                                                </td>
+                                                <td dir="auto">
+                                                    <ul class="simple" dir="auto">
+                                                        <li dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">مورد
+                                                            چهارم</font></font></p></li>
+                                                        <li dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">مورد پنجم</font></font>
+                                                        </p></li>
+                                                        <li dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">مورد ششم</font></font>
+                                                        </p></li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <p class="rubric" dir="auto"><font style="vertical-align: inherit;"><font
+                                                style="vertical-align: inherit;">فهرست با تصاویر</font></font></p>
+                                        <table class="hlist" dir="auto">
+                                            <tbody dir="auto">
+                                            <tr dir="auto">
+                                                <td dir="auto">
+                                                    <ul dir="auto">
+                                                        <li dir="auto">
+                                                            <figure class="align-default" id="id11" dir="auto">
+                                                                <img alt="..."
+                                                                     src="{% static 'assets/image/defualt/yi_jing_01_chien.jpg' %}"
+                                                                     dir="auto">
+                                                                <figcaption dir="auto">
+                                                                    <p dir="auto"><span class="caption-text" dir="auto"><font
+                                                                            style="vertical-align: inherit;"><font
+                                                                            style="vertical-align: inherit;">این یک توضیح کوتاه برای یک فیگور است.</font></font></span><a
+                                                                            class="headerlink" href="#id11"
+                                                                            title="پیوند ثابت به این تصویر"
+                                                                            dir="auto"><font
+                                                                            style="vertical-align: inherit;"><font
+                                                                            style="vertical-align: inherit;"></font></font></a>
+                                                                    </p>
+                                                                </figcaption>
+                                                            </figure>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                                <td dir="auto">
+                                                    <ul dir="auto">
+                                                        <li dir="auto">
+                                                            <figure class="align-default" id="id12" dir="auto">
+                                                                <img alt="..."
+                                                                     src="{% static 'assets/image/defualt/yi_jing_01_chien.jpg' %}"
+                                                                     dir="auto">
+                                                                <figcaption dir="auto">
+                                                                    <p dir="auto"><span class="caption-text" dir="auto"><font
+                                                                            style="vertical-align: inherit;"><font
+                                                                            style="vertical-align: inherit;">این یک شرح طولانی برای یک فیگور است. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor dolor in odio posuere، vitae ornare libero matis. در lobortis justo vestibulum nibh aliquet، non.</font></font></span><a
+                                                                            class="headerlink" href="#id12"
+                                                                            title="پیوند ثابت به این تصویر"
+                                                                            dir="auto"><font
+                                                                            style="vertical-align: inherit;"><font
+                                                                            style="vertical-align: inherit;"></font></font></a>
+                                                                    </p>
+                                                                </figcaption>
+                                                            </figure>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </section>
+                                    <section id="numbered-list" dir="auto">
+                                        <h3 dir="auto"><a class="toc-backref" href="#id29" role="doc-backlink"
+                                                          dir="auto"><span class="section-number" dir="auto"><font
+                                                style="vertical-align: inherit;"><font style="vertical-align: inherit;">4.1.7.</font></font></span><font
+                                                style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            لیست شماره گذاری شده</font></font></a><a class="headerlink"
+                                                                                     href="#numbered-list"
+                                                                                     title="پیوند دائمی به این عنوان"
+                                                                                     dir="auto"><font
+                                                style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></a>
+                                        </h3>
+                                        <ol class="arabic simple" dir="auto">
+                                            <li dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">یکی،</font></font></p></li>
+                                            <li dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">دو</font></font></p></li>
+                                            <li dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">سه با متن طولانی. Lorem ipsum dolor
+                                                sit amet, consectetur adipiscing elit. Sed feugiat sagittis neque quis
+                                                eleifend. Duis rutrum lectus sit amet matis suscipit.</font></font></p>
+                                            </li>
+                                        </ol>
+                                        <ul class="simple" dir="auto">
+                                            <li dir="auto">
+                                                <ol class="upperalpha simple" dir="auto">
+                                                    <li dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">استفاده از گلوله و حروف.
+                                                        (الف)</font></font></p></li>
+                                                </ol>
+                                            </li>
+                                            <li dir="auto">
+                                                <ol class="upperalpha simple" start="2" dir="auto">
+                                                    <li dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">استفاده از گلوله و حروف.
+                                                        (ب)</font></font></p></li>
+                                                </ol>
+                                            </li>
+                                            <li dir="auto">
+                                                <ol class="upperalpha simple" start="3" dir="auto">
+                                                    <li dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">استفاده از گلوله و حروف.
+                                                        (ج)</font></font></p></li>
+                                                </ol>
+                                            </li>
+                                        </ul>
+                                    </section>
+                                </section>
+                                <section id="tables" dir="auto">
+                                    <h2 dir="auto"><a class="toc-backref" href="#id30" role="doc-backlink"
+                                                      dir="auto"><span class="section-number" dir="auto"><font
+                                            style="vertical-align: inherit;"><font
+                                            style="vertical-align: inherit;">4.2.</font></font></span><font
+                                            style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                        جداول</font></font></a><a class="headerlink" href="#tables"
+                                                                  title="پیوند دائمی به این عنوان" dir="auto"><font
+                                            style="vertical-align: inherit;"><font
+                                            style="vertical-align: inherit;"></font></font></a></h2>
+                                    <section id="grid-tables" dir="auto">
+                                        <h3 dir="auto"><a class="toc-backref" href="#id31" role="doc-backlink"
+                                                          dir="auto"><span class="section-number" dir="auto"><font
+                                                style="vertical-align: inherit;"><font style="vertical-align: inherit;">4.2.1.</font></font></span><font
+                                                style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            جداول توری</font></font></a><a class="headerlink" href="#grid-tables"
+                                                                           title="پیوند دائمی به این عنوان"
+                                                                           dir="auto"><font
+                                                style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></a>
+                                        </h3>
+                                        <p dir="auto"><font style="vertical-align: inherit;"><font
+                                                style="vertical-align: inherit;">در اینجا یک جدول شبکه ای به همراه یک
+                                            جدول ساده آمده است:</font></font></p>
+                                        <div class="wy-table-responsive" dir="auto">
+                                            <table class="docutils align-default" dir="auto">
+                                                <thead dir="auto">
+                                                <tr class="row-odd" dir="auto">
+                                                    <th class="head" dir="auto"><p dir="auto"><font
+                                                            style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">ردیف سرصفحه، ستون 1 (ردیف
+                                                        های سرصفحه اختیاری)</font></font></p></th>
+                                                    <th class="head" dir="auto"><p dir="auto"><font
+                                                            style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">سربرگ 2</font></font></p>
+                                                    </th>
+                                                    <th class="head" dir="auto"><p dir="auto"><font
+                                                            style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">سربرگ 3</font></font></p>
+                                                    </th>
+                                                    <th class="head" dir="auto"><p dir="auto"><font
+                                                            style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">هدر 4</font></font></p>
+                                                    </th>
+                                                </tr>
+                                                </thead>
+                                                <tbody dir="auto">
+                                                <tr class="row-even" dir="auto">
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">ردیف بدنه 1، ستون 1</font></font>
+                                                    </p></td>
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">ستون 2</font></font></p>
+                                                    </td>
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">ستون 3</font></font></p>
+                                                    </td>
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">ستون 4</font></font></p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="row-odd" dir="auto">
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">ردیف بدنه 2</font></font>
+                                                    </p></td>
+                                                    <td colspan="3" dir="auto"><p dir="auto"><font
+                                                            style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">سلول ها ممکن است از ستون ها
+                                                        استفاده کنند.</font></font></p></td>
+                                                </tr>
+                                                <tr class="row-even" dir="auto">
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">ردیف بدنه 3</font></font>
+                                                    </p></td>
+                                                    <td rowspan="2" dir="auto"><p dir="auto"><font
+                                                            style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">سلول ها ممکن است در ردیف ها
+                                                        قرار بگیرند.</font></font></p></td>
+                                                    <td colspan="2" rowspan="2" dir="auto">
+                                                        <ul class="simple" dir="auto">
+                                                            <li dir="auto"><p dir="auto"><font
+                                                                    style="vertical-align: inherit;"><font
+                                                                    style="vertical-align: inherit;">سلول های
+                                                                جدول</font></font></p></li>
+                                                            <li dir="auto"><p dir="auto"><font
+                                                                    style="vertical-align: inherit;"><font
+                                                                    style="vertical-align: inherit;">حاوی</font></font>
+                                                            </p></li>
+                                                            <li dir="auto"><p dir="auto"><font
+                                                                    style="vertical-align: inherit;"><font
+                                                                    style="vertical-align: inherit;">عناصر
+                                                                بدن</font></font></p></li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr class="row-odd" dir="auto">
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">ردیف بدنه 4</font></font>
+                                                    </p></td>
+                                                </tr>
+                                                <tr class="row-even" dir="auto">
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">ردیف بدنه 5</font></font>
+                                                    </p></td>
+                                                    <td colspan="2" dir="auto"><p dir="auto"><font
+                                                            style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">سلول ها همچنین ممکن است
+                                                        خالی باشند:</font></font><code
+                                                            class="docutils literal notranslate" dir="auto"><span
+                                                            class="pre" dir="auto">--&gt;</span></code></p></td>
+                                                    <td dir="auto"></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="wy-table-responsive" dir="auto">
+                                            <table class="docutils align-default" dir="auto">
+                                                <thead dir="auto">
+                                                <tr class="row-odd" dir="auto">
+                                                    <th class="head" colspan="2" dir="auto"><p dir="auto"><font
+                                                            style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">ورودی ها</font></font></p>
+                                                    </th>
+                                                    <th class="head" dir="auto"><p dir="auto"><font
+                                                            style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">خروجی</font></font></p>
+                                                    </th>
+                                                </tr>
+                                                <tr class="row-even" dir="auto">
+                                                    <th class="head" dir="auto"><p dir="auto"><font
+                                                            style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">الف</font></font></p></th>
+                                                    <th class="head" dir="auto"><p dir="auto"><font
+                                                            style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">ب</font></font></p></th>
+                                                    <th class="head" dir="auto"><p dir="auto"><font
+                                                            style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">الف یا ب</font></font></p>
+                                                    </th>
+                                                </tr>
+                                                </thead>
+                                                <tbody dir="auto">
+                                                <tr class="row-odd" dir="auto">
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">نادرست</font></font></p>
+                                                    </td>
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">نادرست</font></font></p>
+                                                    </td>
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">نادرست</font></font></p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="row-even" dir="auto">
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">درست است</font></font></p>
+                                                    </td>
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">نادرست</font></font></p>
+                                                    </td>
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">درست است</font></font></p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="row-odd" dir="auto">
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">نادرست</font></font></p>
+                                                    </td>
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">درست است</font></font></p>
+                                                    </td>
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">درست است</font></font></p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="row-even" dir="auto">
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">درست است</font></font></p>
+                                                    </td>
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">درست است</font></font></p>
+                                                    </td>
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">درست است</font></font></p>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <section id="giant-tables" dir="auto">
+                                            <h4 dir="auto"><a class="toc-backref" href="#id32" role="doc-backlink"
+                                                              dir="auto"><span class="section-number" dir="auto"><font
+                                                    style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;">4.2.1.1.</font></font></span><font
+                                                    style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;"> میزهای غول
+                                                پیکر</font></font></a><a class="headerlink" href="#giant-tables"
+                                                                         title="پیوند دائمی به این عنوان"
+                                                                         dir="auto"><font
+                                                    style="vertical-align: inherit;"><font
+                                                    style="vertical-align: inherit;"></font></font></a></h4>
+                                            <div class="wy-table-responsive" dir="auto">
+                                                <table class="docutils align-default" dir="auto">
+                                                    <thead dir="auto">
+                                                    <tr class="row-odd" dir="auto">
+                                                        <th class="head" dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">سربرگ 1</font></font>
+                                                        </p></th>
+                                                        <th class="head" dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">سربرگ 2</font></font>
+                                                        </p></th>
+                                                        <th class="head" dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">سربرگ 3</font></font>
+                                                        </p></th>
+                                                        <th class="head" dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">سربرگ 1</font></font>
+                                                        </p></th>
+                                                        <th class="head" dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">سربرگ 2</font></font>
+                                                        </p></th>
+                                                        <th class="head" dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">سربرگ 3</font></font>
+                                                        </p></th>
+                                                        <th class="head" dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">سربرگ 1</font></font>
+                                                        </p></th>
+                                                        <th class="head" dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">سربرگ 2</font></font>
+                                                        </p></th>
+                                                        <th class="head" dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">سربرگ 3</font></font>
+                                                        </p></th>
+                                                        <th class="head" dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">سربرگ 1</font></font>
+                                                        </p></th>
+                                                        <th class="head" dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">سربرگ 2</font></font>
+                                                        </p></th>
+                                                        <th class="head" dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">سربرگ 3</font></font>
+                                                        </p></th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody dir="auto">
+                                                    <tr class="row-even" dir="auto">
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ردیف بدنه
+                                                            1</font></font></p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 2</font></font>
+                                                        </p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 3</font></font>
+                                                        </p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ردیف بدنه
+                                                            1</font></font></p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 2</font></font>
+                                                        </p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 3</font></font>
+                                                        </p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ردیف بدنه
+                                                            1</font></font></p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 2</font></font>
+                                                        </p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 3</font></font>
+                                                        </p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ردیف بدنه
+                                                            1</font></font></p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 2</font></font>
+                                                        </p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 3</font></font>
+                                                        </p></td>
+                                                    </tr>
+                                                    <tr class="row-odd" dir="auto">
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ردیف بدنه
+                                                            1</font></font></p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 2</font></font>
+                                                        </p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 3</font></font>
+                                                        </p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ردیف بدنه
+                                                            1</font></font></p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 2</font></font>
+                                                        </p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 3</font></font>
+                                                        </p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ردیف بدنه
+                                                            1</font></font></p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 2</font></font>
+                                                        </p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 3</font></font>
+                                                        </p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ردیف بدنه
+                                                            1</font></font></p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 2</font></font>
+                                                        </p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 3</font></font>
+                                                        </p></td>
+                                                    </tr>
+                                                    <tr class="row-even" dir="auto">
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ردیف بدنه
+                                                            1</font></font></p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 2</font></font>
+                                                        </p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 3</font></font>
+                                                        </p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ردیف بدنه
+                                                            1</font></font></p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 2</font></font>
+                                                        </p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 3</font></font>
+                                                        </p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ردیف بدنه
+                                                            1</font></font></p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 2</font></font>
+                                                        </p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 3</font></font>
+                                                        </p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ردیف بدنه
+                                                            1</font></font></p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 2</font></font>
+                                                        </p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 3</font></font>
+                                                        </p></td>
+                                                    </tr>
+                                                    <tr class="row-odd" dir="auto">
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ردیف بدنه
+                                                            1</font></font></p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 2</font></font>
+                                                        </p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 3</font></font>
+                                                        </p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ردیف بدنه
+                                                            1</font></font></p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 2</font></font>
+                                                        </p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 3</font></font>
+                                                        </p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ردیف بدنه
+                                                            1</font></font></p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 2</font></font>
+                                                        </p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 3</font></font>
+                                                        </p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ردیف بدنه
+                                                            1</font></font></p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 2</font></font>
+                                                        </p></td>
+                                                        <td dir="auto"><p dir="auto"><font
+                                                                style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">ستون 3</font></font>
+                                                        </p></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </section>
+                                    </section>
+                                    <section id="list-tables" dir="auto">
+                                        <h3 dir="auto"><a class="toc-backref" href="#id33" role="doc-backlink"
+                                                          dir="auto"><span class="section-number" dir="auto"><font
+                                                style="vertical-align: inherit;"><font style="vertical-align: inherit;">4.2.2.</font></font></span><font
+                                                style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            لیست جداول</font></font></a><a class="headerlink" href="#list-tables"
+                                                                           title="پیوند دائمی به این عنوان"
+                                                                           dir="auto"><font
+                                                style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></a>
+                                        </h3>
+                                        <div class="wy-table-responsive" dir="auto">
+                                            <table class="docutils align-default" id="id13" dir="auto">
+                                                <caption dir="auto"><span class="caption-text" dir="auto"><font
+                                                        style="vertical-align: inherit;"><font
+                                                        style="vertical-align: inherit;">جدول‌های فهرست می‌توانند شرح‌هایی مانند این داشته باشند.</font></font></span><a
+                                                        class="headerlink" href="#id13" title="پیوند دائمی به این جدول"
+                                                        dir="auto"><font style="vertical-align: inherit;"><font
+                                                        style="vertical-align: inherit;"></font></font></a></caption>
+                                                <colgroup dir="auto">
+                                                    <col style="width: 13.3%" dir="auto">
+                                                    <col style="width: 6.7%" dir="auto">
+                                                    <col style="width: 13.3%" dir="auto">
+                                                    <col style="width: 66.7%" dir="auto">
+                                                </colgroup>
+                                                <thead dir="auto">
+                                                <tr class="row-odd" dir="auto">
+                                                    <th class="head stub" dir="auto"><p dir="auto"><font
+                                                            style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">جدول لیست</font></font></p>
+                                                    </th>
+                                                    <th class="head" dir="auto"><p dir="auto"><font
+                                                            style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">سربرگ 1</font></font></p>
+                                                    </th>
+                                                    <th class="head" dir="auto"><p dir="auto"><font
+                                                            style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">سربرگ 2</font></font></p>
+                                                    </th>
+                                                    <th class="head" dir="auto"><p dir="auto"><font
+                                                            style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">هدر 3 بلند. Lorem ipsum
+                                                        dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris
+                                                        arcu.</font></font></p></th>
+                                                </tr>
+                                                </thead>
+                                                <tbody dir="auto">
+                                                <tr class="row-even" dir="auto">
+                                                    <th class="stub" dir="auto"><p dir="auto"><font
+                                                            style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">خرد ردیف 1</font></font>
+                                                    </p></th>
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">ردیف 1</font></font></p>
+                                                    </td>
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">ستون 2</font></font></p>
+                                                    </td>
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">طول ستون 3 Lorem ipsum
+                                                        dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris
+                                                        arcu.</font></font></p></td>
+                                                </tr>
+                                                <tr class="row-odd" dir="auto">
+                                                    <th class="stub" dir="auto"><p dir="auto"><font
+                                                            style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">خرد ردیف 2</font></font>
+                                                    </p></th>
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">ردیف 2</font></font></p>
+                                                    </td>
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">ستون 2</font></font></p>
+                                                    </td>
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">طول ستون 3 Lorem ipsum
+                                                        dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris
+                                                        arcu.</font></font></p></td>
+                                                </tr>
+                                                <tr class="row-even" dir="auto">
+                                                    <th class="stub" dir="auto"><p dir="auto"><font
+                                                            style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">خرد ردیف 3</font></font>
+                                                    </p></th>
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">ردیف 3</font></font></p>
+                                                    </td>
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">ستون 2</font></font></p>
+                                                    </td>
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">طول ستون 3 Lorem ipsum
+                                                        dolor sit amet, consectetur adipiscing elit. Nam sit amet mauris
+                                                        arcu.</font></font></p></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="wy-table-responsive" dir="auto">
+                                            <table class="docutils align-default" id="id14" dir="auto">
+                                                <caption dir="auto"><span class="caption-text" dir="auto"><font
+                                                        style="vertical-align: inherit;"><font
+                                                        style="vertical-align: inherit;">این یک جدول لیست با تصاویر در آن است.</font></font></span><a
+                                                        class="headerlink" href="#id14" title="پیوند دائمی به این جدول"
+                                                        dir="auto"><font style="vertical-align: inherit;"><font
+                                                        style="vertical-align: inherit;"></font></font></a></caption>
+                                                <tbody dir="auto">
+                                                <tr class="row-odd" dir="auto">
+                                                    <td dir="auto">
+                                                        <figure class="align-default" id="id15" dir="auto">
+                                                            <img alt="..."
+                                                                 src="{% static 'assets/image/defualt/yi_jing_01_chien.jpg' %}"
+                                                                 dir="auto">
+                                                            <figcaption dir="auto">
+                                                                <p dir="auto"><span class="caption-text"
+                                                                                    dir="auto"><font
+                                                                        style="vertical-align: inherit;"><font
+                                                                        style="vertical-align: inherit;">این یک توضیح کوتاه برای یک فیگور است.</font></font></span><a
+                                                                        class="headerlink" href="#id15"
+                                                                        title="پیوند ثابت به این تصویر" dir="auto"><font
+                                                                        style="vertical-align: inherit;"><font
+                                                                        style="vertical-align: inherit;"></font></font></a>
+                                                                </p>
+                                                            </figcaption>
+                                                        </figure>
+                                                    </td>
+                                                    <td dir="auto">
+                                                        <figure class="align-default" id="id16" dir="auto">
+                                                            <img alt="..."
+                                                                 src="{% static 'assets/image/defualt/yi_jing_01_chien.jpg' %}"
+                                                                 dir="auto">
+                                                            <figcaption dir="auto">
+                                                                <p dir="auto"><span class="caption-text"
+                                                                                    dir="auto"><font
+                                                                        style="vertical-align: inherit;"><font
+                                                                        style="vertical-align: inherit;">این یک شرح طولانی برای یک فیگور است. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor dolor in odio posuere، vitae ornare libero matis. در lobortis justo vestibulum nibh aliquet، non.</font></font></span><a
+                                                                        class="headerlink" href="#id16"
+                                                                        title="پیوند ثابت به این تصویر" dir="auto"><font
+                                                                        style="vertical-align: inherit;"><font
+                                                                        style="vertical-align: inherit;"></font></font></a>
+                                                                </p>
+                                                            </figcaption>
+                                                        </figure>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </section>
+                                    <section id="tables-with-paragraphs" dir="auto">
+                                        <h3 dir="auto"><a class="toc-backref" href="#id34" role="doc-backlink"
+                                                          dir="auto"><span class="section-number" dir="auto"><font
+                                                style="vertical-align: inherit;"><font style="vertical-align: inherit;">4.2.3.</font></font></span><font
+                                                style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            جداول با پاراگراف</font></font></a><a class="headerlink"
+                                                                                  href="#tables-with-paragraphs"
+                                                                                  title="پیوند دائمی به این عنوان"
+                                                                                  dir="auto"><font
+                                                style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></a>
+                                        </h3>
+                                        <p dir="auto"><font style="vertical-align: inherit;"><font
+                                                style="vertical-align: inherit;">تست کنید تا ببینید جداول با پاراگراف
+                                            های تودرتو به خوبی رفتار می کنند.</font></font></p>
+                                        <div class="wy-table-responsive" dir="auto">
+                                            <table class="docutils align-default" dir="auto">
+                                                <thead dir="auto">
+                                                <tr class="row-odd" dir="auto">
+                                                    <th class="head" dir="auto"><p dir="auto"><font
+                                                            style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">تقدم</font></font></p></th>
+                                                    <th class="head" dir="auto"><p dir="auto"><font
+                                                            style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">اپراتور</font></font></p>
+                                                    </th>
+                                                    <th class="head" dir="auto"><p dir="auto"><font
+                                                            style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">توضیحات</font></font></p>
+                                                    </th>
+                                                </tr>
+                                                </thead>
+                                                <tbody dir="auto">
+                                                <tr class="row-even" dir="auto">
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">1</font></font></p></td>
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">::</font></font></p></td>
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">وضوح محدوده</font></font>
+                                                    </p></td>
+                                                </tr>
+                                                <tr class="row-odd" dir="auto">
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">2</font></font></p></td>
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">( )</font></font></p>
+                                                        <p dir="auto"><font style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">[ ]</font></font></p>
+                                                        <p dir="auto"><font style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">.</font></font></p>
+                                                        <p dir="auto"><font style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">.{}</font></font></p>
+                                                    </td>
+                                                    <td dir="auto"><p dir="auto"><font style="vertical-align: inherit;"><font
+                                                            style="vertical-align: inherit;">فراخوانی تابع</font></font>
+                                                    </p>
+                                                        <p dir="auto"><font style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">اشتراک</font></font>
+                                                        </p>
+                                                        <p dir="auto"><font style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">دسترسی
+                                                            اعضا</font></font></p>
+                                                        <p dir="auto"><font style="vertical-align: inherit;"><font
+                                                                style="vertical-align: inherit;">الحاق میدان بیت</font></font>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </section>
+                                </section>
+                            </section>
+
+
+                        </div>
+                    </div>
+
+                    <!-- footer-buttons  -->
+                    <div class="rst-footer-buttons mt-4" role="navigation" aria-label="Footer">
+                        <a href="index.html" class="btn btn-neutral float-left" title="Read the Docs Sphinx Theme"
+                           accesskey="p" rel="prev">
+                            Previous
+                            <span class="fa fa-arrow-circle-left" aria-hidden="true"></span>
+                        </a>
+                        <a href="configuring.html" class="btn btn-neutral float-right" title="Configuration"
+                           accesskey="n" rel="next">
+                            <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
+                            Next
+                        </a>
+                    </div>
+
+                    <!-- footer -->
+                    {% include "core/include/footer.html" %}
+                </div>
+            </div>
+
+        </section>
+    </div>
+{% endblock %}
+
+{% block Javascript %}
+    {% include "core/include/script.html" %}
+{% endblock %}
+
+

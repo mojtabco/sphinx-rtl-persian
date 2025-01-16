@@ -1,0 +1,1772 @@
+{% extends "core/layout/base.html" %}
+{% load static %}
+
+{% block ContentPage %}
+    <div class="wy-grid-for-nav ">
+
+        <!-- navbar-side -->
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+            <div class="wy-side-scroll">
+
+                <!-- navbar-side-search -->
+                {% include "core/include/navbar-side-search.html" %}
+
+                <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+                    <p class="caption" role="heading">
+                        <span class="caption-text">منو</span>
+                    </p>
+                    <!-- Local TOC -->
+                    <div class="local-toc">
+                        <ul>
+                            <li class="toctree-l1 ">
+                                <a class="reference internal current" href="{% url 'index' %}">
+                                    صفحه اصلی
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toctree-l1" aria-expanded="true">
+                                <a class="reference internal " href="{% url 'page' %}">
+                                    <small>
+                                        این فقط یک صفحه با عنوان بسیار طولانی برای بررسی نحوه برخورد موضوع با این موقعیت
+                                        ها است
+                                    </small>
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="caption" role="heading">
+                            <span class="caption-text">نمونه اسناد</span>
+                        </p>
+                        <ul>
+                            <li class="toctree-l1" aria-expanded="true">
+                                <a class="reference internal " href="{% url 'elements' %}">
+                                    <span class="icon fa-plus-square"> </span>
+                                    المنت های پایه ای
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toctree-l1" aria-expanded="true">
+                                <a class="reference internal " href="{% url 'page1' %}">
+                                    صفحه اول
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toctree-l1" aria-expanded="true">
+                                <a class="reference internal " href="{% url 'page2' %}">
+                                    صفحه دوم
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toctree-l1" aria-expanded="true">
+                                <a class="reference internal " href="{% url 'page3' %}">
+                                    صفحه سوم
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap align-left">
+
+            <!-- mobile-navigation -->
+            {% include "core/include/mobile-navigation.html" %}
+
+            <div class="wy-nav-content">
+                <div class="rst-content">
+
+                    <!-- navigation -->
+                    <div role="navigation" aria-label="Page navigation">
+                        <ul class="wy-breadcrumbs">
+                            <li class="breadcrumb">
+                                <a href="#" class="icon icon-home" aria-label="Home"></a>
+                            </li>
+                            <li class="breadcrumb-item wy-breadcrumbs-extra active ">
+                                 صفحه دوم
+                            </li>
+
+                            <li class="wy-breadcrumbs float-left">
+                                <a href="{% static 'assets/sources/index.rst.txt' %}" rel="nofollow">
+                                    View page source
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- main -->
+                    <div role="main" class="document " itemscope="itemscope" itemtype="http://schema.org/Article">
+                        <div itemprop="articleBody">
+
+                            <section id="paragraph-level-markup">
+                                <h1 class=" wy-text-left ">
+                                    <a class="toc-backref " href="#id41" role="doc-backlink">
+                                        <span class="section-number english-numbers">3. </span>
+                                        Paragraph Level Markup</a>
+                                    <a class="headerlink" href="#paragraph-level-markup"
+                                       title="Permalink to this heading"></a>
+                                </h1>
+                                <nav class="contents " id="table-of-contents">
+                                    <p class="topic-title">Table of Contents</p>
+                                    <ul class="simple ">
+                                        <li><p><a class="reference internal" href="#paragraph-level-markup" id="id41">Paragraph
+                                            Level Markup</a></p>
+                                            <ul>
+                                                <li><p><a class="reference internal" href="#inline-markup" id="id42">Inline
+                                                    Markup</a></p></li>
+                                                <li><p><a class="reference internal" href="#math" id="id43">Math</a></p>
+                                                </li>
+                                                <li><p><a class="reference internal" href="#meta" id="id44">Meta</a></p>
+                                                </li>
+                                                <li><p><a class="reference internal" href="#blocks" id="id45">Blocks</a>
+                                                </p>
+                                                    <ul>
+                                                        <li><p><a class="reference internal" href="#literal-blocks"
+                                                                  id="id46">Literal Blocks</a></p></li>
+                                                        <li><p><a class="reference internal" href="#line-blocks"
+                                                                  id="id47">Line Blocks</a></p></li>
+                                                        <li><p><a class="reference internal" href="#block-quotes"
+                                                                  id="id48">Block Quotes</a></p></li>
+                                                        <li><p><a class="reference internal" href="#doctest-blocks"
+                                                                  id="id49">Doctest Blocks</a></p></li>
+                                                        <li><p><a class="reference internal" href="#code-blocks"
+                                                                  id="id50">Code Blocks</a></p>
+                                                            <ul>
+                                                                <li><p><a class="reference internal"
+                                                                          href="#emphasized-lines-with-line-numbers"
+                                                                          id="id51">Emphasized lines with line
+                                                                    numbers</a></p></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li><p><a class="reference internal" href="#sidebar"
+                                                          id="id52">Sidebar</a></p>
+                                                    <ul>
+                                                        <li><p><a class="reference internal" href="#code-with-sidebar"
+                                                                  id="id53">Code with Sidebar</a></p></li>
+                                                    </ul>
+                                                </li>
+                                                <li><p><a class="reference internal" href="#references" id="id54">References</a>
+                                                </p>
+                                                    <ul>
+                                                        <li><p><a class="reference internal" href="#footnotes"
+                                                                  id="id55">Footnotes</a></p></li>
+                                                        <li><p><a class="reference internal" href="#citations"
+                                                                  id="id56">Citations</a></p></li>
+                                                        <li><p><a class="reference internal" href="#glossary" id="id57">Glossary</a>
+                                                        </p></li>
+                                                        <li><p><a class="reference internal" href="#targets" id="id58">Targets</a>
+                                                        </p></li>
+                                                    </ul>
+                                                </li>
+                                                <li><p><a class="reference internal" href="#directives" id="id59">Directives</a>
+                                                </p>
+                                                    <ul>
+                                                        <li><p><a class="reference internal" href="#contents" id="id60">Contents</a>
+                                                        </p></li>
+                                                        <li><p><a class="reference internal" href="#centered-text"
+                                                                  id="id61">Centered text</a></p></li>
+                                                        <li><p><a class="reference internal" href="#images-figures"
+                                                                  id="id62">Images &amp; Figures</a></p>
+                                                            <ul>
+                                                                <li><p><a class="reference internal" href="#images"
+                                                                          id="id63">Images</a></p></li>
+                                                                <li><p><a class="reference internal" href="#figures"
+                                                                          id="id64">Figures</a></p></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><p><a class="reference internal" href="#admonitions"
+                                                                  id="id65">Admonitions</a></p></li>
+                                                        <li><p><a class="reference internal"
+                                                                  href="#topics-sidebars-and-rubrics" id="id66">Topics,
+                                                            Sidebars, and Rubrics</a></p></li>
+                                                        <li><p><a class="reference internal" href="#target-footnotes"
+                                                                  id="id67">Target Footnotes</a></p></li>
+                                                        <li><p><a class="reference internal" href="#replacement-text"
+                                                                  id="id68">Replacement Text</a></p></li>
+                                                        <li><p><a class="reference internal" href="#compound-paragraph"
+                                                                  id="id69">Compound Paragraph</a></p></li>
+                                                    </ul>
+                                                </li>
+                                                <li><p><a class="reference internal" href="#download-links" id="id70">Download
+                                                    Links</a></p></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <section id="inline-markup">
+                                    <h2><a class="toc-backref" href="#id42" role="doc-backlink"><span
+                                            class="section-number">3.1. </span>Inline Markup</a><a class="headerlink"
+                                                                                                   href="#inline-markup"
+                                                                                                   title="Permalink to this heading"></a>
+                                    </h2>
+                                    <p class="wy-text-left">Paragraphs contain text and may contain inline markup: <em>emphasis</em>,
+                                        <strong>strong emphasis</strong>, <code
+                                                class="docutils literal notranslate"><span class="pre">inline</span>
+                                            <span class="pre">literals</span></code>,
+                                        standalone hyperlinks (<a class="reference external"
+                                                                  href="http://www.python.org">http://www.python.org</a>),
+                                        external hyperlinks (<a class="reference external"
+                                                                href="http://www.python.org/">Python</a> <a
+                                                class="footnote-reference brackets" href="#id37" id="id38"
+                                                role="doc-noteref"><span class="fn-bracket">[</span>5<span
+                                                class="fn-bracket">]</span></a>), internal cross-references (<a
+                                                class="reference internal" href="#example">example</a>),
+                                        external hyperlinks with embedded URIs (<a class="reference external"
+                                                                                   href="http://www.python.org">Python
+                                            web site</a>), footnote references
+                                        (manually numbered <a class="footnote-reference brackets" href="#id15" id="id1"
+                                                              role="doc-noteref"><span class="fn-bracket">[</span>1<span
+                                                class="fn-bracket">]</span></a>, anonymous auto-numbered <a
+                                                class="footnote-reference brackets" href="#id18" id="id2"
+                                                role="doc-noteref"><span class="fn-bracket">[</span>3<span
+                                                class="fn-bracket">]</span></a>, labeled auto-numbered <a
+                                                class="footnote-reference brackets" href="#label" id="id3"
+                                                role="doc-noteref"><span class="fn-bracket">[</span>2<span
+                                                class="fn-bracket">]</span></a>, or symbolic <a
+                                                class="footnote-reference brackets" href="#id19" id="id4"
+                                                role="doc-noteref"><span class="fn-bracket">[</span>*<span
+                                                class="fn-bracket">]</span></a>),
+                                        citation references (<a class="footnote-reference brackets" href="#id24"
+                                                                id="id5" role="doc-noteref"><span
+                                                class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a>),
+                                        substitution references (<a class="reference internal"
+                                                                    href="../_images/yi_jing_01_chien.jpg"><img
+                                                alt="EXAMPLE" src="../_images/yi_jing_01_chien.jpg" style="width: 1em;"></a>),
+                                        and <span class="target"
+                                                  id="inline-hyperlink-targets">inline hyperlink targets</span>
+                                        (see <a class="reference internal" href="#targets">Targets</a> below for a
+                                        reference back to here). Character-level inline markup is also possible
+                                        (although exceedingly ugly!) in <em>re</em><code
+                                                class="docutils literal notranslate"><span class="pre">Structured</span></code><em>Text</em>.
+                                        Problems are indicated by <a href="#id35"><span class="problematic" id="id36">|problematic|</span></a>
+                                        text (generated by processing errors; this one is intentional).</p>
+                                    <p class="wy-text-left">Also with <code class="docutils literal notranslate"><span
+                                            class="pre">sphinx.ext.autodoc</span></code>,
+                                        which I use in the demo, I can link to <a class="reference internal"
+                                                                                  href="api.html#test_py_module.test.Foo"
+                                                                                  title="test_py_module.test.Foo"><code
+                                                class="xref py py-class docutils literal notranslate"><span class="pre">test_py_module.test.Foo</span></code></a>.
+                                        It will link you right to my code documentation for it.</p>
+                                    <p class="wy-text-left">The default role for <a class="footnote-reference brackets"
+                                                                                    href="#id15" id="id6"
+                                                                                    role="doc-noteref"><span
+                                            class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>
+                                        interpreted text is <cite>Title Reference</cite>. Here are some explicit
+                                        interpreted text roles:
+                                        a PEP reference (<span class="target" id="index-0"></span><a
+                                                class="pep reference external" href="https://peps.python.org/pep-0287/"><strong>PEP
+                                            287</strong></a>); an RFC reference (<span class="target"
+                                                                                       id="index-1"></span><a
+                                                class="rfc reference external"
+                                                href="https://datatracker.ietf.org/doc/html/rfc2822.html"><strong>RFC
+                                            2822</strong></a>); a <sub>subscript</sub>; a <sup>superscript</sup>;
+                                        and explicit roles for <em>standard</em> <strong>inline</strong> <code
+                                                class="docutils literal notranslate"><span
+                                                class="pre">markup</span></code>.</p>
+                                    <p class="wy-text-left">GUI labels are a useful way to indicate that <span
+                                            class="guilabel">Some action</span> is to be taken by the user.
+                                        The GUI label should not run over <code
+                                                class="docutils literal notranslate"><span
+                                                class="pre">line-height</span></code> so as not to <span
+                                                class="guilabel">interfere</span> with text from adjacent lines.</p>
+                                    <p class="wy-text-left">Key-bindings indicate that <a
+                                            class="footnote-reference brackets" href="#id15"
+                                            id="id7" role="doc-noteref"><span
+                                            class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> the read
+                                        is to press a button on the keyboard or mouse,
+                                        for example <kbd class="kbd docutils literal notranslate">MMB</kbd> and <kbd
+                                                class="kbd compound docutils literal notranslate"><kbd
+                                                class="kbd docutils literal notranslate">Shift</kbd>-<kbd
+                                                class="kbd docutils literal notranslate">MMB</kbd></kbd>. Another useful
+                                        markup to indicate a user action
+                                        is to use <code class="docutils literal notranslate"><span class="pre">menuselection</span></code>
+                                        this <a class="footnote-reference brackets" href="#id15" id="id8"
+                                                role="doc-noteref"><span class="fn-bracket">[</span>1<span
+                                                class="fn-bracket">]</span></a> can <a
+                                                class="footnote-reference brackets" href="#id15" id="id9"
+                                                role="doc-noteref"><span class="fn-bracket">[</span>1<span
+                                                class="fn-bracket">]</span></a> be <a
+                                                class="footnote-reference brackets" href="#id15" id="id10"
+                                                role="doc-noteref"><span class="fn-bracket">[</span>1<span
+                                                class="fn-bracket">]</span></a> used <a
+                                                class="footnote-reference brackets" href="#id15" id="id11"
+                                                role="doc-noteref"><span class="fn-bracket">[</span>1<span
+                                                class="fn-bracket">]</span></a> to <a
+                                                class="footnote-reference brackets" href="#id15" id="id12"
+                                                role="doc-noteref"><span class="fn-bracket">[</span>1<span
+                                                class="fn-bracket">]</span></a> show <a
+                                                class="footnote-reference brackets" href="#id15" id="id13"
+                                                role="doc-noteref"><span class="fn-bracket">[</span>1<span
+                                                class="fn-bracket">]</span></a> short <a
+                                                class="footnote-reference brackets" href="#id15" id="id14"
+                                                role="doc-noteref"><span class="fn-bracket">[</span>1<span
+                                                class="fn-bracket">]</span></a> and long menus in software.
+                                        For example, and <code class="docutils literal notranslate"><span class="pre">menuselection</span></code>
+                                        can be seen here that breaks is too long to fit on this line.
+                                        <span class="menuselection">My ‣ Software ‣ Some menu ‣ Some sub menu 1 ‣ sub menu 2</span>.
+                                    </p>
+                                    <p class="wy-text-left">Let’s test wrapping and whitespace significance in inline
+                                        literals:
+                                        <code class="docutils literal notranslate"><span class="pre">This</span> <span
+                                                class="pre">is</span> <span class="pre">an</span> <span class="pre">example</span>
+                                            <span class="pre">of</span> <span class="pre">--inline-literal</span> <span
+                                                    class="pre">--text,</span> <span class="pre">--including</span>
+                                            <span class="pre">some--</span>
+                                            <span class="pre">strangely--hyphenated-words.</span>&nbsp; <span
+                                                    class="pre">Adjust-the-width-of-your-browser-window</span>
+                                            <span class="pre">to</span> <span class="pre">see</span> <span class="pre">how</span>
+                                            <span class="pre">the</span> <span class="pre">text</span> <span
+                                                    class="pre">is</span> <span class="pre">wrapped.</span>&nbsp; <span
+                                                    class="pre">--</span> <span class="pre">----</span> <span
+                                                    class="pre">--------</span>&nbsp; <span class="pre">Now</span> <span
+                                                    class="pre">note</span>&nbsp;&nbsp;&nbsp; <span
+                                                    class="pre">the</span>
+                                            <span class="pre">spacing</span>&nbsp;&nbsp;&nbsp; <span
+                                                    class="pre">between</span> <span class="pre">the</span>&nbsp;&nbsp;&nbsp;
+                                            <span class="pre">words</span> <span class="pre">of</span>&nbsp;&nbsp;&nbsp;
+                                            <span class="pre">this</span> <span class="pre">sentence</span>&nbsp;&nbsp;&nbsp;
+                                            <span class="pre">(words</span>
+                                            <span class="pre">should</span>&nbsp;&nbsp;&nbsp; <span
+                                                    class="pre">be</span> <span class="pre">grouped</span>&nbsp;&nbsp;&nbsp;
+                                            <span class="pre">in</span> <span class="pre">pairs).</span></code></p>
+                                    <p class="wy-text-left">If the <code class="docutils literal notranslate"><span
+                                            class="pre">--pep-references</span></code>
+                                        option was supplied, there should be a live link to PEP 258 here.</p>
+                                    <p class="wy-text-left">Very long URLs should be wrapped so lines do not overflow
+                                        and cause horizontal
+                                        scrolling: <a class="reference external"
+                                                      href="https://www.google.com/search?hl=en&amp;q=very%20long%20url%20example%20of%20a%20url%20that%20is%20extremely%20long%20you%20probably%20want%20to%20avoid%20it%20but%20here%20we%20are">https://www.google.com/search?hl=en&amp;q=very%20long%20url%20example%20of%20a%20url%20that%20is%20extremely%20long%20you%20probably%20want%20to%20avoid%20it%20but%20here%20we%20are</a>
+                                    </p>
+                                </section>
+                                <section id="math">
+                                    <h2><a class="toc-backref" href="#id43" role="doc-backlink"><span
+                                            class="section-number">3.2. </span>Math</a><a class="headerlink"
+                                                                                          href="#math"
+                                                                                          title="Permalink to this heading"></a>
+                                    </h2>
+                                    <p class="wy-text-left">This is a test. Here is an equation:
+                                        <span class="math notranslate nohighlight"><mjx-container
+                                                class="MathJax CtxtMenu_Attached_0" jax="CHTML"
+                                                style="font-size: 114.5%; position: relative;" tabindex="0"
+                                                ctxtmenu_counter="0"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi
+                                                class="mjx-i"><mjx-c class="mjx-c1D44B TEX-I"></mjx-c></mjx-mi><mjx-script
+                                                style="vertical-align: -0.15em; margin-left: -0.024em;"><mjx-texatom
+                                                size="s" texclass="ORD"><mjx-mn class="mjx-n"><mjx-c
+                                                class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c
+                                                class="mjx-c3A"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c
+                                                class="mjx-c35"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub><mjx-mo
+                                                class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mo
+                                                class="mjx-n" space="4"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi
+                                                class="mjx-i"><mjx-c class="mjx-c1D44B TEX-I"></mjx-c></mjx-mi><mjx-script
+                                                style="vertical-align: -0.15em; margin-left: -0.024em;"><mjx-mn
+                                                class="mjx-n" size="s"><mjx-c
+                                                class="mjx-c30"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo
+                                                class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msub
+                                                space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44B TEX-I"></mjx-c></mjx-mi><mjx-script
+                                                style="vertical-align: -0.15em; margin-left: -0.024em;"><mjx-mn
+                                                class="mjx-n" size="s"><mjx-c
+                                                class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo
+                                                class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msub
+                                                space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44B TEX-I"></mjx-c></mjx-mi><mjx-script
+                                                style="vertical-align: -0.15em; margin-left: -0.024em;"><mjx-mn
+                                                class="mjx-n" size="s"><mjx-c
+                                                class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo
+                                                class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msub
+                                                space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44B TEX-I"></mjx-c></mjx-mi><mjx-script
+                                                style="vertical-align: -0.15em; margin-left: -0.024em;"><mjx-mn
+                                                class="mjx-n" size="s"><mjx-c
+                                                class="mjx-c33"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo
+                                                class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msub
+                                                space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44B TEX-I"></mjx-c></mjx-mi><mjx-script
+                                                style="vertical-align: -0.15em; margin-left: -0.024em;"><mjx-mn
+                                                class="mjx-n" size="s"><mjx-c
+                                                class="mjx-c34"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo
+                                                class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml
+                                                unselectable="on" display="inline"><math
+                                                xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>X</mi><mrow
+                                                data-mjx-texclass="ORD"><mn>0</mn><mo>:</mo><mn>5</mn></mrow></msub><mo>=</mo><mo
+                                                stretchy="false">(</mo><msub><mi>X</mi><mn>0</mn></msub><mo>,</mo><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><msub><mi>X</mi><mn>2</mn></msub><mo>,</mo><msub><mi>X</mi><mn>3</mn></msub><mo>,</mo><msub><mi>X</mi><mn>4</mn></msub><mo
+                                                stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container></span>.
+                                        Here is another:
+                                    </p>
+                                    <div class="math notranslate nohighlight" id="equation-this-is-a-label">
+                                        <span class="eqno">(1)<a class="headerlink" href="#equation-this-is-a-label"
+                                                                 title="Permalink to this equation"></a></span>
+                                        <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML"
+                                                       style="font-size: 114.5%; position: relative;" display="true"
+                                                       tabindex="0" ctxtmenu_counter="1">
+                                            <mjx-math display="true" style="margin-left: 0px; margin-right: 0px;"
+                                                      class="MJX-TEX" aria-hidden="true">
+                                                <mjx-msup>
+                                                    <mjx-mi class="mjx-n">
+                                                        <mjx-c class="mjx-c2207"></mjx-c>
+                                                    </mjx-mi>
+                                                    <mjx-script style="vertical-align: 0.413em;">
+                                                        <mjx-mn class="mjx-n" size="s">
+                                                            <mjx-c class="mjx-c32"></mjx-c>
+                                                        </mjx-mn>
+                                                    </mjx-script>
+                                                </mjx-msup>
+                                                <mjx-mi class="mjx-i">
+                                                    <mjx-c class="mjx-c1D453 TEX-I"></mjx-c>
+                                                </mjx-mi>
+                                                <mjx-mo class="mjx-n" space="4">
+                                                    <mjx-c class="mjx-c3D"></mjx-c>
+                                                </mjx-mo>
+                                                <mjx-mfrac space="4">
+                                                    <mjx-frac type="d">
+                                                        <mjx-num>
+                                                            <mjx-nstrut type="d"></mjx-nstrut>
+                                                            <mjx-mn class="mjx-n">
+                                                                <mjx-c class="mjx-c31"></mjx-c>
+                                                            </mjx-mn>
+                                                        </mjx-num>
+                                                        <mjx-dbox>
+                                                            <mjx-dtable>
+                                                                <mjx-line type="d"></mjx-line>
+                                                                <mjx-row>
+                                                                    <mjx-den>
+                                                                        <mjx-dstrut type="d"></mjx-dstrut>
+                                                                        <mjx-msup>
+                                                                            <mjx-mi class="mjx-i">
+                                                                                <mjx-c class="mjx-c1D45F TEX-I"></mjx-c>
+                                                                            </mjx-mi>
+                                                                            <mjx-script
+                                                                                    style="vertical-align: 0.289em;">
+                                                                                <mjx-mn class="mjx-n" size="s">
+                                                                                    <mjx-c class="mjx-c32"></mjx-c>
+                                                                                </mjx-mn>
+                                                                            </mjx-script>
+                                                                        </mjx-msup>
+                                                                    </mjx-den>
+                                                                </mjx-row>
+                                                            </mjx-dtable>
+                                                        </mjx-dbox>
+                                                    </mjx-frac>
+                                                </mjx-mfrac>
+                                                <mjx-mfrac>
+                                                    <mjx-frac type="d">
+                                                        <mjx-num>
+                                                            <mjx-nstrut type="d"></mjx-nstrut>
+                                                            <mjx-mi class="mjx-i">
+                                                                <mjx-c class="mjx-c1D715"></mjx-c>
+                                                            </mjx-mi>
+                                                        </mjx-num>
+                                                        <mjx-dbox>
+                                                            <mjx-dtable>
+                                                                <mjx-line type="d"></mjx-line>
+                                                                <mjx-row>
+                                                                    <mjx-den>
+                                                                        <mjx-dstrut type="d"></mjx-dstrut>
+                                                                        <mjx-mrow>
+                                                                            <mjx-mi class="mjx-i">
+                                                                                <mjx-c class="mjx-c1D715"></mjx-c>
+                                                                            </mjx-mi>
+                                                                            <mjx-mi class="mjx-i">
+                                                                                <mjx-c class="mjx-c1D45F TEX-I"></mjx-c>
+                                                                            </mjx-mi>
+                                                                        </mjx-mrow>
+                                                                    </mjx-den>
+                                                                </mjx-row>
+                                                            </mjx-dtable>
+                                                        </mjx-dbox>
+                                                    </mjx-frac>
+                                                </mjx-mfrac>
+                                                <mjx-mrow>
+                                                    <mjx-mo class="mjx-s3">
+                                                        <mjx-c class="mjx-c28 TEX-S3"></mjx-c>
+                                                    </mjx-mo>
+                                                    <mjx-msup>
+                                                        <mjx-mi class="mjx-i">
+                                                            <mjx-c class="mjx-c1D45F TEX-I"></mjx-c>
+                                                        </mjx-mi>
+                                                        <mjx-script style="vertical-align: 0.413em;">
+                                                            <mjx-mn class="mjx-n" size="s">
+                                                                <mjx-c class="mjx-c32"></mjx-c>
+                                                            </mjx-mn>
+                                                        </mjx-script>
+                                                    </mjx-msup>
+                                                    <mjx-mfrac>
+                                                        <mjx-frac type="d">
+                                                            <mjx-num>
+                                                                <mjx-nstrut type="d"></mjx-nstrut>
+                                                                <mjx-mrow>
+                                                                    <mjx-mi class="mjx-i">
+                                                                        <mjx-c class="mjx-c1D715"></mjx-c>
+                                                                    </mjx-mi>
+                                                                    <mjx-mi class="mjx-i">
+                                                                        <mjx-c class="mjx-c1D453 TEX-I"></mjx-c>
+                                                                    </mjx-mi>
+                                                                </mjx-mrow>
+                                                            </mjx-num>
+                                                            <mjx-dbox>
+                                                                <mjx-dtable>
+                                                                    <mjx-line type="d"></mjx-line>
+                                                                    <mjx-row>
+                                                                        <mjx-den>
+                                                                            <mjx-dstrut type="d"></mjx-dstrut>
+                                                                            <mjx-mrow>
+                                                                                <mjx-mi class="mjx-i">
+                                                                                    <mjx-c class="mjx-c1D715"></mjx-c>
+                                                                                </mjx-mi>
+                                                                                <mjx-mi class="mjx-i">
+                                                                                    <mjx-c class="mjx-c1D45F TEX-I"></mjx-c>
+                                                                                </mjx-mi>
+                                                                            </mjx-mrow>
+                                                                        </mjx-den>
+                                                                    </mjx-row>
+                                                                </mjx-dtable>
+                                                            </mjx-dbox>
+                                                        </mjx-frac>
+                                                    </mjx-mfrac>
+                                                    <mjx-mo class="mjx-s3">
+                                                        <mjx-c class="mjx-c29 TEX-S3"></mjx-c>
+                                                    </mjx-mo>
+                                                </mjx-mrow>
+                                                <mjx-mo class="mjx-n" space="3">
+                                                    <mjx-c class="mjx-c2B"></mjx-c>
+                                                </mjx-mo>
+                                                <mjx-mfrac space="3">
+                                                    <mjx-frac type="d">
+                                                        <mjx-num>
+                                                            <mjx-nstrut type="d"></mjx-nstrut>
+                                                            <mjx-mn class="mjx-n">
+                                                                <mjx-c class="mjx-c31"></mjx-c>
+                                                            </mjx-mn>
+                                                        </mjx-num>
+                                                        <mjx-dbox>
+                                                            <mjx-dtable>
+                                                                <mjx-line type="d"></mjx-line>
+                                                                <mjx-row>
+                                                                    <mjx-den>
+                                                                        <mjx-dstrut type="d"></mjx-dstrut>
+                                                                        <mjx-mrow>
+                                                                            <mjx-msup>
+                                                                                <mjx-mi class="mjx-i">
+                                                                                    <mjx-c class="mjx-c1D45F TEX-I"></mjx-c>
+                                                                                </mjx-mi>
+                                                                                <mjx-script
+                                                                                        style="vertical-align: 0.289em;">
+                                                                                    <mjx-mn class="mjx-n" size="s">
+                                                                                        <mjx-c class="mjx-c32"></mjx-c>
+                                                                                    </mjx-mn>
+                                                                                </mjx-script>
+                                                                            </mjx-msup>
+                                                                            <mjx-mi class="mjx-n" space="2">
+                                                                                <mjx-c class="mjx-c73"></mjx-c>
+                                                                                <mjx-c class="mjx-c69"></mjx-c>
+                                                                                <mjx-c class="mjx-c6E"></mjx-c>
+                                                                            </mjx-mi>
+                                                                            <mjx-mo class="mjx-n">
+                                                                                <mjx-c class="mjx-c2061"></mjx-c>
+                                                                            </mjx-mo>
+                                                                            <mjx-mi class="mjx-i" space="2">
+                                                                                <mjx-c class="mjx-c1D703 TEX-I"></mjx-c>
+                                                                            </mjx-mi>
+                                                                        </mjx-mrow>
+                                                                    </mjx-den>
+                                                                </mjx-row>
+                                                            </mjx-dtable>
+                                                        </mjx-dbox>
+                                                    </mjx-frac>
+                                                </mjx-mfrac>
+                                                <mjx-mfrac>
+                                                    <mjx-frac type="d">
+                                                        <mjx-num>
+                                                            <mjx-nstrut type="d"></mjx-nstrut>
+                                                            <mjx-mrow>
+                                                                <mjx-mi class="mjx-i">
+                                                                    <mjx-c class="mjx-c1D715"></mjx-c>
+                                                                </mjx-mi>
+                                                                <mjx-mi class="mjx-i">
+                                                                    <mjx-c class="mjx-c1D453 TEX-I"></mjx-c>
+                                                                </mjx-mi>
+                                                            </mjx-mrow>
+                                                        </mjx-num>
+                                                        <mjx-dbox>
+                                                            <mjx-dtable>
+                                                                <mjx-line type="d"></mjx-line>
+                                                                <mjx-row>
+                                                                    <mjx-den>
+                                                                        <mjx-dstrut type="d"></mjx-dstrut>
+                                                                        <mjx-mrow>
+                                                                            <mjx-mi class="mjx-i">
+                                                                                <mjx-c class="mjx-c1D715"></mjx-c>
+                                                                            </mjx-mi>
+                                                                            <mjx-mi class="mjx-i">
+                                                                                <mjx-c class="mjx-c1D703 TEX-I"></mjx-c>
+                                                                            </mjx-mi>
+                                                                        </mjx-mrow>
+                                                                    </mjx-den>
+                                                                </mjx-row>
+                                                            </mjx-dtable>
+                                                        </mjx-dbox>
+                                                    </mjx-frac>
+                                                </mjx-mfrac>
+                                                <mjx-mrow>
+                                                    <mjx-mo class="mjx-s3">
+                                                        <mjx-c class="mjx-c28 TEX-S3"></mjx-c>
+                                                    </mjx-mo>
+                                                    <mjx-mi class="mjx-n">
+                                                        <mjx-c class="mjx-c73"></mjx-c>
+                                                        <mjx-c class="mjx-c69"></mjx-c>
+                                                        <mjx-c class="mjx-c6E"></mjx-c>
+                                                    </mjx-mi>
+                                                    <mjx-mo class="mjx-n">
+                                                        <mjx-c class="mjx-c2061"></mjx-c>
+                                                    </mjx-mo>
+                                                    <mjx-mi class="mjx-i" space="2">
+                                                        <mjx-c class="mjx-c1D703 TEX-I"></mjx-c>
+                                                    </mjx-mi>
+                                                    <mjx-mstyle>
+                                                        <mjx-mspace style="width: 0.167em;"></mjx-mspace>
+                                                    </mjx-mstyle>
+                                                    <mjx-mfrac>
+                                                        <mjx-frac type="d">
+                                                            <mjx-num>
+                                                                <mjx-nstrut type="d"></mjx-nstrut>
+                                                                <mjx-mrow>
+                                                                    <mjx-mi class="mjx-i">
+                                                                        <mjx-c class="mjx-c1D715"></mjx-c>
+                                                                    </mjx-mi>
+                                                                    <mjx-mi class="mjx-i">
+                                                                        <mjx-c class="mjx-c1D453 TEX-I"></mjx-c>
+                                                                    </mjx-mi>
+                                                                </mjx-mrow>
+                                                            </mjx-num>
+                                                            <mjx-dbox>
+                                                                <mjx-dtable>
+                                                                    <mjx-line type="d"></mjx-line>
+                                                                    <mjx-row>
+                                                                        <mjx-den>
+                                                                            <mjx-dstrut type="d"></mjx-dstrut>
+                                                                            <mjx-mrow>
+                                                                                <mjx-mi class="mjx-i">
+                                                                                    <mjx-c class="mjx-c1D715"></mjx-c>
+                                                                                </mjx-mi>
+                                                                                <mjx-mi class="mjx-i">
+                                                                                    <mjx-c class="mjx-c1D703 TEX-I"></mjx-c>
+                                                                                </mjx-mi>
+                                                                            </mjx-mrow>
+                                                                        </mjx-den>
+                                                                    </mjx-row>
+                                                                </mjx-dtable>
+                                                            </mjx-dbox>
+                                                        </mjx-frac>
+                                                    </mjx-mfrac>
+                                                    <mjx-mo class="mjx-s3">
+                                                        <mjx-c class="mjx-c29 TEX-S3"></mjx-c>
+                                                    </mjx-mo>
+                                                </mjx-mrow>
+                                                <mjx-mo class="mjx-n" space="3">
+                                                    <mjx-c class="mjx-c2B"></mjx-c>
+                                                </mjx-mo>
+                                                <mjx-mfrac space="3">
+                                                    <mjx-frac type="d">
+                                                        <mjx-num>
+                                                            <mjx-nstrut type="d"></mjx-nstrut>
+                                                            <mjx-mn class="mjx-n">
+                                                                <mjx-c class="mjx-c31"></mjx-c>
+                                                            </mjx-mn>
+                                                        </mjx-num>
+                                                        <mjx-dbox>
+                                                            <mjx-dtable>
+                                                                <mjx-line type="d"></mjx-line>
+                                                                <mjx-row>
+                                                                    <mjx-den>
+                                                                        <mjx-dstrut type="d"></mjx-dstrut>
+                                                                        <mjx-mrow>
+                                                                            <mjx-msup>
+                                                                                <mjx-mi class="mjx-i">
+                                                                                    <mjx-c class="mjx-c1D45F TEX-I"></mjx-c>
+                                                                                </mjx-mi>
+                                                                                <mjx-script
+                                                                                        style="vertical-align: 0.289em;">
+                                                                                    <mjx-mn class="mjx-n" size="s">
+                                                                                        <mjx-c class="mjx-c32"></mjx-c>
+                                                                                    </mjx-mn>
+                                                                                </mjx-script>
+                                                                            </mjx-msup>
+                                                                            <mjx-msup space="2">
+                                                                                <mjx-mi class="mjx-n">
+                                                                                    <mjx-c class="mjx-c73"></mjx-c>
+                                                                                    <mjx-c class="mjx-c69"></mjx-c>
+                                                                                    <mjx-c class="mjx-c6E"></mjx-c>
+                                                                                </mjx-mi>
+                                                                                <mjx-script
+                                                                                        style="vertical-align: 0.396em;">
+                                                                                    <mjx-mn class="mjx-n" size="s">
+                                                                                        <mjx-c class="mjx-c32"></mjx-c>
+                                                                                    </mjx-mn>
+                                                                                </mjx-script>
+                                                                            </mjx-msup>
+                                                                            <mjx-mo class="mjx-n">
+                                                                                <mjx-c class="mjx-c2061"></mjx-c>
+                                                                            </mjx-mo>
+                                                                            <mjx-mi class="mjx-i" space="2">
+                                                                                <mjx-c class="mjx-c1D703 TEX-I"></mjx-c>
+                                                                            </mjx-mi>
+                                                                        </mjx-mrow>
+                                                                    </mjx-den>
+                                                                </mjx-row>
+                                                            </mjx-dtable>
+                                                        </mjx-dbox>
+                                                    </mjx-frac>
+                                                </mjx-mfrac>
+                                                <mjx-mfrac>
+                                                    <mjx-frac type="d">
+                                                        <mjx-num>
+                                                            <mjx-nstrut type="d"></mjx-nstrut>
+                                                            <mjx-mrow>
+                                                                <mjx-msup>
+                                                                    <mjx-mi class="mjx-i">
+                                                                        <mjx-c class="mjx-c1D715"></mjx-c>
+                                                                    </mjx-mi>
+                                                                    <mjx-script
+                                                                            style="vertical-align: 0.363em; margin-left: 0.052em;">
+                                                                        <mjx-mn class="mjx-n" size="s">
+                                                                            <mjx-c class="mjx-c32"></mjx-c>
+                                                                        </mjx-mn>
+                                                                    </mjx-script>
+                                                                </mjx-msup>
+                                                                <mjx-mi class="mjx-i">
+                                                                    <mjx-c class="mjx-c1D453 TEX-I"></mjx-c>
+                                                                </mjx-mi>
+                                                            </mjx-mrow>
+                                                        </mjx-num>
+                                                        <mjx-dbox>
+                                                            <mjx-dtable>
+                                                                <mjx-line type="d"></mjx-line>
+                                                                <mjx-row>
+                                                                    <mjx-den>
+                                                                        <mjx-dstrut type="d"></mjx-dstrut>
+                                                                        <mjx-mrow>
+                                                                            <mjx-mi class="mjx-i">
+                                                                                <mjx-c class="mjx-c1D715"></mjx-c>
+                                                                            </mjx-mi>
+                                                                            <mjx-msup>
+                                                                                <mjx-mi class="mjx-i">
+                                                                                    <mjx-c class="mjx-c1D719 TEX-I"></mjx-c>
+                                                                                </mjx-mi>
+                                                                                <mjx-script
+                                                                                        style="vertical-align: 0.289em;">
+                                                                                    <mjx-mn class="mjx-n" size="s">
+                                                                                        <mjx-c class="mjx-c32"></mjx-c>
+                                                                                    </mjx-mn>
+                                                                                </mjx-script>
+                                                                            </mjx-msup>
+                                                                        </mjx-mrow>
+                                                                    </mjx-den>
+                                                                </mjx-row>
+                                                            </mjx-dtable>
+                                                        </mjx-dbox>
+                                                    </mjx-frac>
+                                                </mjx-mfrac>
+                                            </mjx-math>
+                                            <mjx-assistive-mml unselectable="on" display="block">
+                                                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                                                    <msup>
+                                                        <mi mathvariant="normal">∇</mi>
+                                                        <mn>2</mn>
+                                                    </msup>
+                                                    <mi>f</mi>
+                                                    <mo>=</mo>
+                                                    <mfrac>
+                                                        <mn>1</mn>
+                                                        <msup>
+                                                            <mi>r</mi>
+                                                            <mn>2</mn>
+                                                        </msup>
+                                                    </mfrac>
+                                                    <mfrac>
+                                                        <mi>∂</mi>
+                                                        <mrow>
+                                                            <mi>∂</mi>
+                                                            <mi>r</mi>
+                                                        </mrow>
+                                                    </mfrac>
+                                                    <mrow data-mjx-texclass="INNER">
+                                                        <mo data-mjx-texclass="OPEN">(</mo>
+                                                        <msup>
+                                                            <mi>r</mi>
+                                                            <mn>2</mn>
+                                                        </msup>
+                                                        <mfrac>
+                                                            <mrow>
+                                                                <mi>∂</mi>
+                                                                <mi>f</mi>
+                                                            </mrow>
+                                                            <mrow>
+                                                                <mi>∂</mi>
+                                                                <mi>r</mi>
+                                                            </mrow>
+                                                        </mfrac>
+                                                        <mo data-mjx-texclass="CLOSE">)</mo>
+                                                    </mrow>
+                                                    <mo>+</mo>
+                                                    <mfrac>
+                                                        <mn>1</mn>
+                                                        <mrow>
+                                                            <msup>
+                                                                <mi>r</mi>
+                                                                <mn>2</mn>
+                                                            </msup>
+                                                            <mi>sin</mi>
+                                                            <mo data-mjx-texclass="NONE">⁡</mo>
+                                                            <mi>θ</mi>
+                                                        </mrow>
+                                                    </mfrac>
+                                                    <mfrac>
+                                                        <mrow>
+                                                            <mi>∂</mi>
+                                                            <mi>f</mi>
+                                                        </mrow>
+                                                        <mrow>
+                                                            <mi>∂</mi>
+                                                            <mi>θ</mi>
+                                                        </mrow>
+                                                    </mfrac>
+                                                    <mrow data-mjx-texclass="INNER">
+                                                        <mo data-mjx-texclass="OPEN">(</mo>
+                                                        <mi>sin</mi>
+                                                        <mo data-mjx-texclass="NONE">⁡</mo>
+                                                        <mi>θ</mi>
+                                                        <mstyle scriptlevel="0">
+                                                            <mspace width="0.167em"></mspace>
+                                                        </mstyle>
+                                                        <mfrac>
+                                                            <mrow>
+                                                                <mi>∂</mi>
+                                                                <mi>f</mi>
+                                                            </mrow>
+                                                            <mrow>
+                                                                <mi>∂</mi>
+                                                                <mi>θ</mi>
+                                                            </mrow>
+                                                        </mfrac>
+                                                        <mo data-mjx-texclass="CLOSE">)</mo>
+                                                    </mrow>
+                                                    <mo>+</mo>
+                                                    <mfrac>
+                                                        <mn>1</mn>
+                                                        <mrow>
+                                                            <msup>
+                                                                <mi>r</mi>
+                                                                <mn>2</mn>
+                                                            </msup>
+                                                            <msup>
+                                                                <mi>sin</mi>
+                                                                <mn>2</mn>
+                                                            </msup>
+                                                            <mo data-mjx-texclass="NONE">⁡</mo>
+                                                            <mi>θ</mi>
+                                                        </mrow>
+                                                    </mfrac>
+                                                    <mfrac>
+                                                        <mrow>
+                                                            <msup>
+                                                                <mi>∂</mi>
+                                                                <mn>2</mn>
+                                                            </msup>
+                                                            <mi>f</mi>
+                                                        </mrow>
+                                                        <mrow>
+                                                            <mi>∂</mi>
+                                                            <msup>
+                                                                <mi>ϕ</mi>
+                                                                <mn>2</mn>
+                                                            </msup>
+                                                        </mrow>
+                                                    </mfrac>
+                                                </math>
+                                            </mjx-assistive-mml>
+                                        </mjx-container>
+                                    </div>
+                                    <p class="wy-text-left">You can add a link to equations like the one above <a
+                                            class="reference internal"
+                                            href="#equation-this-is-a-label">(1)</a>
+                                        by using <code class="docutils literal notranslate"><span
+                                                class="pre">:eq:</span></code>.</p>
+                                </section>
+                                <section id="meta">
+                                    <h2><a class="toc-backref" href="#id44" role="doc-backlink"><span
+                                            class="section-number">3.3. </span>Meta</a><a class="headerlink"
+                                                                                          href="#meta"
+                                                                                          title="Permalink to this heading"></a>
+                                    </h2>
+                                </section>
+                                <section id="blocks">
+                                    <h2><a class="toc-backref" href="#id45" role="doc-backlink"><span
+                                            class="section-number">3.4. </span>Blocks</a><a class="headerlink"
+                                                                                            href="#blocks"
+                                                                                            title="Permalink to this heading"></a>
+                                    </h2>
+                                    <section id="literal-blocks">
+                                        <h3><a class="toc-backref" href="#id46" role="doc-backlink"><span
+                                                class="section-number">3.4.1. </span>Literal Blocks</a><a
+                                                class="headerlink" href="#literal-blocks"
+                                                title="Permalink to this heading"></a></h3>
+                                        <p class="wy-text-left">Literal blocks are indicated with a double-colon (“::”)
+                                            at the end of
+                                            the preceding paragraph (over there <code
+                                                    class="docutils literal notranslate"><span class="pre">--&gt;</span></code>).
+                                            They can be indented:</p>
+                                        <div class="highlight-default notranslate">
+                                            <div class="highlight wy-text-left"><pre><span></span><span
+                                                    class="k">if</span> <span
+                                                    class="n">literal_block</span><span class="p">:</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="s1">'is left as-is'</span>
+    <span class="n">spaces_and_linebreaks</span> <span class="o">=</span> <span class="s1">'are preserved'</span>
+    <span class="n">markup_processing</span> <span class="o">=</span> <span class="kc">None</span>
+</pre>
+                                            </div>
+                                        </div>
+                                        <p class="wy-text-left">Or they can be quoted without indentation:</p>
+                                        <div class="highlight-default notranslate">
+                                            <div class="highlight wy-text-left"><pre><span></span>&gt;&gt; Great idea!
+&gt;
+&gt; Why didn't I think of that?
+</pre>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section id="line-blocks">
+                                        <h3><a class="toc-backref" href="#id47" role="doc-backlink"><span
+                                                class="section-number">3.4.2. </span>Line Blocks</a><a
+                                                class="headerlink" href="#line-blocks"
+                                                title="Permalink to this heading"></a></h3>
+                                        <div class="line-block">
+                                            <div class="line wy-text-left">This is a line block. It ends with a blank
+                                                line.
+                                            </div>
+                                            <div class="line-block">
+                                                <div class="line wy-text-left">Each new line begins with a vertical bar
+                                                    (“|”).
+                                                </div>
+                                                <div class="line wy-text-left">Line breaks and initial indents are
+                                                    preserved.
+                                                </div>
+                                            </div>
+                                            <div class="line wy-text-left">Continuation lines are wrapped portions of
+                                                long lines;
+                                                they begin with a space in place of the vertical bar.
+                                            </div>
+                                            <div class="line-block">
+                                                <div class="line wy-text-left">The left edge of a continuation line need
+                                                    not be
+                                                    aligned with
+                                                    the left edge of the text above it.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="line-block">
+                                            <div class="line wy-text-left">This is a second line block.</div>
+                                            <div class="line wy-text-left"><br></div>
+                                            <div class="line wy-text-left">Blank lines are permitted internally, but
+                                                they must begin
+                                                with a “|”.
+                                            </div>
+                                        </div>
+                                        <p class="wy-text-left">Take it away, Eric the Orchestra Leader!</p>
+                                        <blockquote>
+                                            <div>
+                                                <div class="line-block">
+                                                    <div class="line wy-text-left">A one, two, a one two three four
+                                                    </div>
+                                                    <div class="line wy-text-left"><br></div>
+                                                    <div class="line wy-text-left">Half a bee, philosophically,</div>
+                                                    <div class="line-block">
+                                                        <div class="line wy-text-left">must, <em>ipso facto</em>, half
+                                                            not be.
+                                                        </div>
+                                                    </div>
+                                                    <div class="line wy-text-left">But half the bee has got to be,</div>
+                                                    <div class="line-block">
+                                                        <div class="line wy-text-left"><em>vis a vis</em> its entity.
+                                                            D’you see?
+                                                        </div>
+                                                        <div class="line wy-text-left"><br></div>
+                                                    </div>
+                                                    <div class="line wy-text-left">But can a bee be said to be</div>
+                                                    <div class="line-block">
+                                                        <div class="line wy-text-left">or not to be an entire bee,</div>
+                                                        <div class="line-block">
+                                                            <div class="line wy-text-left">when half the bee is not a
+                                                                bee,
+                                                            </div>
+                                                            <div class="line-block">
+                                                                <div class="line wy-text-left">due to some ancient
+                                                                    injury?
+                                                                </div>
+                                                                <div class="line wy-text-left"><br></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="line wy-text-left">Singing…</div>
+                                                </div>
+                                            </div>
+                                        </blockquote>
+                                    </section>
+                                    <section id="block-quotes">
+                                        <h3><a class="toc-backref" href="#id48" role="doc-backlink"><span
+                                                class="section-number">3.4.3. </span>Block Quotes</a><a
+                                                class="headerlink" href="#block-quotes"
+                                                title="Permalink to this heading"></a></h3>
+                                        <p class="wy-text-left">Block quotes consist of indented body elements:</p>
+                                        <blockquote>
+                                            <div><p class="wy-text-left">My theory by A. Elk. Brackets Miss, brackets.
+                                                This theory goes
+                                                as follows and begins now. All brontosauruses are thin at one
+                                                end, much much thicker in the middle and then thin again at the
+                                                far end. That is my theory, it is mine, and belongs to me and I
+                                                own it, and what it is too.</p>
+                                                <p class="attribution">—Anne Elk (Miss)</p>
+                                            </div>
+                                        </blockquote>
+                                    </section>
+                                    <section id="doctest-blocks">
+                                        <h3><a class="toc-backref" href="#id49" role="doc-backlink"><span
+                                                class="section-number">3.4.4. </span>Doctest Blocks</a><a
+                                                class="headerlink" href="#doctest-blocks"
+                                                title="Permalink to this heading"></a></h3>
+                                        <div class="doctest highlight-default notranslate">
+                                            <div class="highlight wy-text-left"><pre><span></span><span
+                                                    class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span
+                                                    class="s1">'Python-specific usage examples; begun with "&gt;&gt;&gt;"'</span>
+<span class="go">Python-specific usage examples; begun with "&gt;&gt;&gt;"</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="s1">'(cut and pasted from interactive Python sessions)'</span>
+<span class="go">(cut and pasted from interactive Python sessions)</span>
+</pre>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section id="code-blocks">
+                                        <h3><a class="toc-backref" href="#id50" role="doc-backlink"><span
+                                                class="section-number">3.4.5. </span>Code Blocks</a><a
+                                                class="headerlink" href="#code-blocks"
+                                                title="Permalink to this heading"></a></h3>
+                                        <pre class="literal-block"># parsed-literal test
+curl -O <a class="reference external" href="http://someurl/release">http://someurl/release</a>-3.0.2.tar-gz</pre>
+                                        <div class="literal-block-wrapper docutils container" id="id31">
+                                            <div class="code-block-caption"><span class="caption-text">Code Blocks can have captions.</span><a
+                                                    class="headerlink" href="#id31" title="Permalink to this code"></a>
+                                            </div>
+                                            <div class="highlight-json notranslate">
+                                                <div class="highlight wy-text-left"><pre><span></span><span
+                                                        class="p">{</span>
+<span class="nt">"windows"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"panes"</span><span class="p">:</span><span class="w"> </span><span
+                                                            class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"shell_command"</span><span class="p">:</span><span
+                                                            class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">"echo 'did you know'"</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">"echo 'you can inline'"</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"shell_command"</span><span class="p">:</span><span
+                                                            class="w"> </span><span
+                                                            class="s2">"echo 'single commands'"</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="s2">"echo 'for panes'"</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">"window_name"</span><span class="p">:</span><span class="w"> </span><span
+                                                            class="s2">"long form"</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">],</span>
+<span class="nt">"session_name"</span><span class="p">:</span><span class="w"> </span><span
+                                                            class="s2">"shorthands"</span>
+<span class="p">}</span>
+</pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <section id="emphasized-lines-with-line-numbers">
+                                            <h4><a class="toc-backref" href="#id51" role="doc-backlink"><span
+                                                    class="section-number">3.4.5.1. </span>Emphasized lines with line
+                                                numbers</a><a class="headerlink"
+                                                              href="#emphasized-lines-with-line-numbers"
+                                                              title="Permalink to this heading"></a></h4>
+                                            <div class="highlight-python notranslate">
+                                                <div class="highlight wy-text-left"><pre><span></span><span
+                                                        class="linenos">1</span><span class="k">def</span> <span
+                                                        class="nf">some_function</span><span class="p">():</span>
+<span class="linenos">2</span>    <span class="n">interesting</span> <span class="o">=</span> <span
+                                                            class="kc">False</span>
+<span class="hll"><span class="linenos">3</span>    <span class="nb">print</span> <span class="s1">'This line is highlighted.'</span>
+</span><span class="linenos">4</span>    <span class="nb">print</span> <span class="s1">'This one is not...'</span>
+<span class="hll"><span class="linenos">5</span>    <span class="nb">print</span> <span
+        class="s1">'...but this one is.'</span>
+</span></pre>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </section>
+                                </section>
+                                <section id="sidebar">
+                                    <h2><a class="toc-backref" href="#id52" role="doc-backlink"><span
+                                            class="section-number">3.5. </span>Sidebar</a><a class="headerlink"
+                                                                                             href="#sidebar"
+                                                                                             title="Permalink to this heading"></a>
+                                    </h2>
+                                    <aside class="sidebar">
+                                        <p class="sidebar-title wy-text-left">Ch’ien / The Creative</p>
+                                        <img alt="..."
+                                             src="{% static 'assets/image/defualt/yi_jing_01_chien.jpg' %}">
+                                        <p class="wy-text-left"><em>Above</em> CH’IEN THE CREATIVE, HEAVEN</p>
+                                        <p class="wy-text-left"><em>Below</em> CH’IEN THE CREATIVE, HEAVEN</p>
+                                    </aside>
+                                    <p class="wy-text-left">The first hexagram is made up of six unbroken lines. These
+                                        unbroken lines stand
+                                        for the primal power,
+                                        which is light-giving, active, strong, and of the spirit. The hexagram is
+                                        consistently strong in character,
+                                        and since it is without weakness, its essence is power or energy. Its image is
+                                        heaven.
+                                        Its energy is represented as unrestricted by any fixed conditions in space and
+                                        is therefore conceived of as motion.
+                                        Time is regarded as the basis of this motion.
+                                        Thus the hexagram includes also the power of time and the power of persisting in
+                                        time, that is, duration.</p>
+                                    <p class="wy-text-left">The power represented by the hexagram is to be interpreted
+                                        in a dual sense in
+                                        terms of its action
+                                        on the universe and of its action on the world of men. In relation to the
+                                        universe, the hexagram expresses the strong,
+                                        creative action of the Deity. In relation to the human world, it denotes the
+                                        creative action of the holy man or sage,
+                                        of the ruler or leader of men, who through his power awakens and develops their
+                                        higher nature.</p>
+                                    <section id="code-with-sidebar">
+                                        <h3><a class="toc-backref" href="#id53" role="doc-backlink"><span
+                                                class="section-number">3.5.1. </span>Code with Sidebar</a><a
+                                                class="headerlink" href="#code-with-sidebar"
+                                                title="Permalink to this heading"></a></h3>
+                                        <aside class="sidebar">
+                                            <p class="sidebar-title wy-text-left">A code example</p>
+                                            <p class="wy-text-left">With a sidebar on the right.</p>
+                                        </aside>
+                                        <div class="literal-block-wrapper docutils container" id="id32">
+                                            <div class="code-block-caption"><span class="caption-text">Literal includes can also have captions.</span><a
+                                                    class="headerlink" href="#id32" title="Permalink to this code"></a>
+                                            </div>
+                                            <div class="highlight-python notranslate">
+                                                <div class="highlight wy-text-left"><pre><span></span><span
+                                                        class="linenos"> 1</span><span
+                                                        class="c1"># -*- coding: utf-8 -*-</span>
+<span class="linenos"> 2</span><span class="sd">"""Test Module for sphinx_rtd_theme."""</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="k">class</span> <span class="nc">Foo</span><span class="p">:</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>    <span class="s2">"""Docstring for class Foo.</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="s2">    This text tests for the formatting of docstrings generated from output</span>
+<span class="linenos">10</span><span class="s2">    ``sphinx.ext.autodoc``. Which contain reST, but sphinx nests it in the</span>
+<span class="linenos">11</span><span class="s2">    ``&lt;dl&gt;``, and ``&lt;dt&gt;`` tags. Also, ``&lt;tt&gt;`` is used for class, method names</span>
+<span class="linenos">12</span><span class="s2">    and etc, but those will *always* have the ``.descname`` or</span>
+<span class="linenos">13</span><span class="s2">    ``.descclassname`` class.</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="s2">    Term</span>
+<span class="linenos">16</span><span class="s2">        It is also possible to include definitions inside docstrings.</span>
+<span class="linenos">17</span><span class="s2">        They should be styled as a normal definition list.</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="s2">    :Field List:</span>
+<span class="linenos">20</span><span class="s2">        It is also possible to include definitions inside docstrings.</span>
+<span class="linenos">21</span><span class="s2">        They should be styled as a normal definition list.</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="s2">    .. [1] A footnote contains body elements, consistently indented by at</span>
+<span class="linenos">24</span><span class="s2">       least 3 spaces.</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span><span class="s2">    .. [Citation] A citation contains body elements, consistently indented by at</span>
+<span class="linenos">27</span><span class="s2">       least 3 spaces.</span>
+<span class="linenos">28</span>
+<span class="linenos">29</span><span class="s2">    Normal ``&lt;tt&gt;`` (like the &lt;tt&gt; I just wrote here) needs to be shown with</span>
+<span class="linenos">30</span><span class="s2">    the same style as anything else with ````this type of markup````.</span>
+<span class="linenos">31</span>
+<span class="linenos">32</span><span class="s2">    It's common for programmers to give a code example inside of their</span>
+<span class="linenos">33</span><span class="s2">    docstring::</span>
+<span class="linenos">34</span>
+<span class="linenos">35</span><span class="s2">        from test_py_module import Foo</span>
+<span class="linenos">36</span>
+<span class="linenos">37</span><span class="s2">        myclass = Foo()</span>
+<span class="linenos">38</span><span class="s2">        myclass.dothismethod('with this argument')</span>
+<span class="linenos">39</span><span class="s2">        myclass.flush()</span>
+<span class="linenos">40</span>
+</pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </section>
+                                <section id="references">
+                                    <h2><a class="toc-backref" href="#id54" role="doc-backlink"><span
+                                            class="section-number">3.6. </span>References</a><a class="headerlink"
+                                                                                                href="#references"
+                                                                                                title="Permalink to this heading"></a>
+                                    </h2>
+                                    <section id="footnotes">
+                                        <h3><a class="toc-backref" href="#id55" role="doc-backlink"><span
+                                                class="section-number">3.6.1. </span>Footnotes</a><a class="headerlink"
+                                                                                                     href="#footnotes"
+                                                                                                     title="Permalink to this heading"></a>
+                                        </h3>
+                                        <aside class="footnote-list brackets">
+                                            <aside class="footnote brackets" id="id15" role="doc-footnote">
+                                                <span class="label"><span class="fn-bracket">[</span>1<span
+                                                        class="fn-bracket">]</span></span>
+                                                <span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a
+                                                        role="doc-backlink" href="#id6">2</a>,<a role="doc-backlink"
+                                                                                                 href="#id7">3</a>,<a
+                                                        role="doc-backlink" href="#id8">4</a>,<a role="doc-backlink"
+                                                                                                 href="#id9">5</a>,<a
+                                                        role="doc-backlink" href="#id10">6</a>,<a role="doc-backlink"
+                                                                                                  href="#id11">7</a>,<a
+                                                        role="doc-backlink" href="#id12">8</a>,<a role="doc-backlink"
+                                                                                                  href="#id13">9</a>,<a
+                                                        role="doc-backlink" href="#id14">10</a>,<a role="doc-backlink"
+                                                                                                   href="#id16">11</a>)</span>
+                                                <p class="wy-text-left">A footnote contains body elements, consistently
+                                                    indented by at
+                                                    least 3 spaces.</p>
+                                                <p class="wy-text-left">This is the footnote’s second paragraph.</p>
+                                            </aside>
+                                            <aside class="footnote brackets" id="label" role="doc-footnote">
+                                                <span class="label"><span class="fn-bracket">[</span>2<span
+                                                        class="fn-bracket">]</span></span>
+                                                <span class="backrefs">(<a role="doc-backlink" href="#id3">1</a>,<a
+                                                        role="doc-backlink" href="#id17">2</a>)</span>
+                                                <p class="wy-text-left">Footnotes may be numbered, either manually (as
+                                                    in <a
+                                                            class="footnote-reference brackets" href="#id15" id="id16"
+                                                            role="doc-noteref"><span class="fn-bracket">[</span>1<span
+                                                            class="fn-bracket">]</span></a>) or
+                                                    automatically using a “#”-prefixed label. This footnote has a
+                                                    label so it can be referred to from multiple places, both as a
+                                                    footnote reference (<a class="footnote-reference brackets"
+                                                                           href="#label" id="id17"
+                                                                           role="doc-noteref"><span
+                                                            class="fn-bracket">[</span>2<span
+                                                            class="fn-bracket">]</span></a>) and as a hyperlink
+                                                    reference
+                                                    (<a class="reference internal" href="#label">label</a>).</p>
+                                            </aside>
+                                            <aside class="footnote brackets" id="id18" role="doc-footnote">
+                                                <span class="label"><span class="fn-bracket">[</span><a
+                                                        role="doc-backlink" href="#id2">3</a><span
+                                                        class="fn-bracket">]</span></span>
+                                                <p class="wy-text-left">This footnote is numbered automatically and
+                                                    anonymously using a
+                                                    label of “#” only.</p>
+                                            </aside>
+                                            <aside class="footnote brackets" id="id19" role="doc-footnote">
+                                                <span class="label"><span class="fn-bracket">[</span><a
+                                                        role="doc-backlink" href="#id4">*</a><span
+                                                        class="fn-bracket">]</span></span>
+                                                <p class="wy-text-left">Footnotes may also use symbols, specified with a
+                                                    “*” label.
+                                                    Here’s a reference to the next footnote: <a
+                                                            class="footnote-reference brackets" href="#id21" id="id20"
+                                                            role="doc-noteref"><span class="fn-bracket">[</span>†<span
+                                                            class="fn-bracket">]</span></a>.</p>
+                                            </aside>
+                                            <aside class="footnote brackets" id="id21" role="doc-footnote">
+                                                <span class="label"><span class="fn-bracket">[</span><a
+                                                        role="doc-backlink" href="#id20">†</a><span
+                                                        class="fn-bracket">]</span></span>
+                                                <p class="wy-text-left">This footnote shows the next symbol in the
+                                                    sequence.</p>
+                                            </aside>
+                                            <aside class="footnote brackets" id="id22" role="doc-footnote">
+                                                <span class="label"><span class="fn-bracket">[</span>4<span
+                                                        class="fn-bracket">]</span></span>
+                                                <p class="wy-text-left">Here’s an unreferenced footnote, with a
+                                                    reference to a
+                                                    nonexistent footnote: <a href="#id71"><span class="problematic"
+                                                                                                id="id23">[5]_</span></a>.
+                                                </p>
+                                            </aside>
+                                        </aside>
+                                    </section>
+                                    <section id="citations">
+                                        <h3><a class="toc-backref" href="#id56" role="doc-backlink"><span
+                                                class="section-number">3.6.2. </span>Citations</a><a class="headerlink"
+                                                                                                     href="#citations"
+                                                                                                     title="Permalink to this heading"></a>
+                                        </h3>
+                                        <div role="list" class="citation-list">
+                                            <div class="citation" id="citation" role="doc-biblioentry">
+                                                <span class="label"><span class="fn-bracket">[</span><a
+                                                        role="doc-backlink" href="#id27">Citation</a><span
+                                                        class="fn-bracket">]</span></span>
+                                                <p class="wy-text-left">This is the citation I made, let’s make this
+                                                    extremely long so that
+                                                    we can tell that it doesn’t follow the normal responsive table
+                                                    stuff.</p>
+                                            </div>
+                                        </div>
+                                        <aside class="footnote-list brackets">
+                                            <aside class="footnote brackets" id="id24" role="doc-footnote">
+                                                <span class="label"><span class="fn-bracket">[</span><a
+                                                        role="doc-backlink" href="#id5">12</a><span
+                                                        class="fn-bracket">]</span></span>
+                                                <p class="wy-text-left">This citation has some <code
+                                                        class="docutils literal notranslate"><span
+                                                        class="pre">code</span> <span class="pre">blocks</span></code>
+                                                    in it, maybe some <strong>bold</strong> and
+                                                    <em>italics</em> too. Heck, lets put a link to a meta citation <a
+                                                            class="footnote-reference brackets" href="#id26" id="id25"
+                                                            role="doc-noteref"><span class="fn-bracket">[</span>13<span
+                                                            class="fn-bracket">]</span></a> too.</p>
+                                            </aside>
+                                            <aside class="footnote brackets" id="id26" role="doc-footnote">
+                                                <span class="label"><span class="fn-bracket">[</span><a
+                                                        role="doc-backlink" href="#id25">13</a><span class="fn-bracket">]</span></span>
+                                                <p class="wy-text-left">This citation will have two backlinks.</p>
+                                            </aside>
+                                        </aside>
+                                        <p class="wy-text-left">Here’s a reference to the above, <a
+                                                class="reference internal"
+                                                href="#citation" id="id27"><span>[Citation]</span></a>,
+                                            and a <span id="id28">[nonexistent]</span> citation.</p>
+                                    </section>
+                                    <section id="glossary">
+                                        <h3><a class="toc-backref" href="#id57" role="doc-backlink"><span
+                                                class="section-number">3.6.3. </span>Glossary</a><a class="headerlink"
+                                                                                                    href="#glossary"
+                                                                                                    title="Permalink to this heading"></a>
+                                        </h3>
+                                        <p class="wy-text-left">This is a glossary with definition terms for thing like
+                                            <a
+                                                    class="reference internal" href="#term-Writing"><span
+                                                    class="xref std std-term">Writing</span></a>:</p>
+                                        <dl class="simple glossary">
+                                            <dt id="term-Documentation">Documentation<a class="headerlink"
+                                                                                        href="#term-Documentation"
+                                                                                        title="Permalink to this term"></a>
+                                            </dt>
+                                            <dd><p class="wy-text-left">Provides users with the knowledge they need to
+                                                use something.</p>
+                                            </dd>
+                                            <dt id="term-Reading">Reading<a class="headerlink" href="#term-Reading"
+                                                                            title="Permalink to this term"></a></dt>
+                                            <dd><p class="wy-text-left">The process of taking information into ones mind
+                                                through the use of
+                                                eyes.</p>
+                                            </dd>
+                                            <dt id="term-Writing">Writing<a class="headerlink" href="#term-Writing"
+                                                                            title="Permalink to this term"></a></dt>
+                                            <dd><p class="wy-text-left">The process of putting thoughts into a medium
+                                                for other people to <a
+                                                        class="reference internal" href="#term-Reading"><span
+                                                        class="xref std std-term">read</span></a>.</p>
+                                            </dd>
+                                        </dl>
+                                    </section>
+                                    <section id="targets">
+                                        <h3><a class="toc-backref" href="#id58" role="doc-backlink"><span
+                                                class="section-number">3.6.4. </span>Targets</a><a class="headerlink"
+                                                                                                   href="#targets"
+                                                                                                   title="Permalink to this heading"></a>
+                                        </h3>
+                                        <p id="example">This paragraph is pointed to by the explicit “example” target.
+                                            A reference can be found under <a class="reference internal"
+                                                                              href="#inline-markup">Inline Markup</a>,
+                                            above. <a class="reference internal" href="#inline-hyperlink-targets">Inline
+                                                hyperlink targets</a> are also possible.</p>
+                                        <p class="wy-text-left">Section headers are implicit targets, referred to by
+                                            name. See
+                                            <a class="reference internal" href="#targets">Targets</a>, which is a
+                                            subsection of <a class="reference internal"
+                                                             href="#references">References</a>.</p>
+                                        <p class="wy-text-left">Explicit external targets are interpolated into
+                                            references such as “<a
+                                                    class="reference external" href="http://www.python.org/">Python</a>
+                                            <a
+                                                    class="footnote-reference brackets" href="#id37" id="id39"
+                                                    role="doc-noteref"><span class="fn-bracket">[</span>5<span
+                                                    class="fn-bracket">]</span></a>”.</p>
+                                        <p class="wy-text-left">Targets may be indirect and anonymous. Thus <a
+                                                class="reference internal"
+                                                href="#targets">this
+                                            phrase</a> may also
+                                            refer to the <a class="reference internal" href="#targets">Targets</a>
+                                            section.</p>
+                                        <p class="wy-text-left">Here’s a <a href="#id72"><span class="problematic"
+                                                                                               id="id73">`hyperlink reference without a target`_</span></a>,
+                                            which generates an error.</p>
+                                    </section>
+                                </section>
+                                <section id="directives">
+                                    <h2><a class="toc-backref" href="#id59" role="doc-backlink"><span
+                                            class="section-number">3.7. </span>Directives</a><a class="headerlink"
+                                                                                                href="#directives"
+                                                                                                title="Permalink to this heading"></a>
+                                    </h2>
+                                    <section id="contents">
+                                        <h3><a class="toc-backref" href="#id60" role="doc-backlink"><span
+                                                class="section-number">3.7.1. </span>Contents</a><a class="headerlink"
+                                                                                                    href="#contents"
+                                                                                                    title="Permalink to this heading"></a>
+                                        </h3>
+                                        <p class="wy-text-left">These are just a sample of the many reStructuredText
+                                            Directives. For others,
+                                            please see:
+                                            <a class="reference external"
+                                               href="http://docutils.sourceforge.net/docs/ref/rst/directives.html">http://docutils.sourceforge.net/docs/ref/rst/directives.html</a>.
+                                        </p>
+                                    </section>
+                                    <section id="centered-text">
+                                        <h3><a class="toc-backref" href="#id61" role="doc-backlink"><span
+                                                class="section-number">3.7.2. </span>Centered text</a><a
+                                                class="headerlink" href="#centered-text"
+                                                title="Permalink to this heading"></a></h3>
+                                        <p class="wy-text-left">You can create a statement with centered text with <code
+                                                class="docutils literal notranslate"><span class="pre">..</span> <span
+                                                class="pre">centered::</span></code></p>
+                                        <p class="centered">
+                                            <strong>This is centered text!</strong></p></section>
+                                    <section id="images-figures">
+                                        <h3><a class="toc-backref" href="#id62" role="doc-backlink"><span
+                                                class="section-number">3.7.3. </span>Images &amp; Figures</a><a
+                                                class="headerlink" href="#images-figures"
+                                                title="Permalink to this heading"></a></h3>
+                                        <section id="images">
+                                            <h4><a class="toc-backref" href="#id63" role="doc-backlink"><span
+                                                    class="section-number">3.7.3.1. </span>Images</a><a
+                                                    class="headerlink" href="#images" title="Permalink to this heading"></a>
+                                            </h4>
+                                            <p class="wy-text-left">An image directive (also clickable – a hyperlink
+                                                reference):</p>
+                                            <a class="reference internal image-reference" href="#directives"><img
+                                                    alt="..."
+                                                    src="{% static 'assets/image/defualt/yi_jing_01_chien.jpg' %}"></a>
+                                        </section>
+                                        <section id="figures">
+                                            <h4><a class="toc-backref" href="#id64" role="doc-backlink"><span
+                                                    class="section-number">3.7.3.2. </span>Figures</a><a
+                                                    class="headerlink" href="#figures"
+                                                    title="Permalink to this heading"></a></h4>
+                                            <figure class="align-default" id="id33">
+                                                <img alt="reStructuredText, the markup syntax"
+                                                     src="{% static 'assets/image/defualt/yi_jing_01_chien.jpg' %}">
+                                                <figcaption>
+                                                    <p class="wy-text-left"><span class="caption-text">A figure is an image with a caption and/or a legend:</span><a
+                                                            class="headerlink" href="#id33"
+                                                            title="Permalink to this image"></a></p>
+                                                    <div class="legend">
+                                                        <div class="wy-table-responsive">
+                                                            <table class="docutils align-default">
+                                                                <tbody>
+                                                                <tr class="row-odd">
+                                                                    <td><p class="wy-text-left">re</p></td>
+                                                                    <td><p class="wy-text-left">Revised, revisited,
+                                                                        based on ‘re’ module.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="row-even">
+                                                                    <td><p class="wy-text-left">Structured</p></td>
+                                                                    <td><p class="wy-text-left">Structure-enhanced text,
+                                                                        structuredtext.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="row-odd">
+                                                                    <td><p class="wy-text-left">Text</p></td>
+                                                                    <td><p class="wy-text-left">Well it is, isn’t
+                                                                        it?</p></td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <p class="wy-text-left">This paragraph is also part of the
+                                                            legend.</p>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                            <p class="wy-text-left">A figure directive with center alignment</p>
+                                            <figure class="align-center" id="id34">
+                                                <img alt="..."
+                                                     src="{% static 'assets/image/defualt/yi_jing_01_chien.jpg' %}">
+                                                <figcaption>
+                                                    <p class="wy-text-left"><span
+                                                            class="caption-text">This caption should be centered.</span><a
+                                                            class="headerlink" href="#id34"
+                                                            title="Permalink to this image"></a></p>
+                                                </figcaption>
+                                            </figure>
+                                        </section>
+                                    </section>
+                                    <section id="admonitions">
+                                        <h3><a class="toc-backref" href="#id65" role="doc-backlink"><span
+                                                class="section-number">3.7.4. </span>Admonitions</a><a
+                                                class="headerlink" href="#admonitions"
+                                                title="Permalink to this heading"></a></h3>
+                                        <div class="admonition attention">
+                                            <p class="admonition-title ms-2"> توجه</p>
+                                            <p class="wy-text-left">Directives at large.</p>
+                                        </div>
+                                        <div class="admonition caution">
+                                            <p class="admonition-title"> احتیاط</p>
+                                            <p class="wy-text-left">Don’t take any wooden nickels.</p>
+                                        </div>
+                                        <div class="admonition danger">
+                                            <p class="admonition-title"> خطر</p>
+                                            <p class="wy-text-left">Mad scientist at work!</p>
+                                        </div>
+                                        <div class="admonition error">
+                                            <p class="admonition-title"> خطا</p>
+                                            <p class="wy-text-left">Does not compute.</p>
+                                        </div>
+                                        <div class="admonition hint">
+                                            <p class="admonition-title"> اشاره</p>
+                                            <p class="wy-text-left">It’s bigger than a bread box.</p>
+                                        </div>
+                                        <div class="admonition important">
+                                            <p class="admonition-title"> مهم</p>
+                                            <ul class="simple">
+                                                <li><p class="wy-text-left">Wash behind your ears.</p></li>
+                                                <li><p class="wy-text-left">Clean up your room.</p>
+                                                    <ul>
+                                                        <li><p class="wy-text-left">Including the closet.</p></li>
+                                                        <li><p class="wy-text-left">The bathroom too.</p>
+                                                            <ul>
+                                                                <li><p class="wy-text-left">Take the trash out of the
+                                                                    bathroom.</p></li>
+                                                                <li><p class="wy-text-left">Clean the sink.</p></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li><p class="wy-text-left">Call your mother.</p></li>
+                                                <li><p class="wy-text-left">Back up your data.</p></li>
+                                            </ul>
+                                        </div>
+                                        <div class="admonition note">
+                                            <p class="admonition-title"> توجه داشته باشید</p>
+                                            <p class="wy-text-left">This is a note.
+                                                Equations within a note:
+                                                <span class="math notranslate nohighlight"><mjx-container
+                                                        class="MathJax CtxtMenu_Attached_0" jax="CHTML"
+                                                        style="font-size: 114.5%; position: relative;" tabindex="0"
+                                                        ctxtmenu_counter="2"><mjx-math class="MJX-TEX"
+                                                                                       aria-hidden="true"><mjx-msub><mjx-mi
+                                                        class="mjx-i"><mjx-c class="mjx-c1D43A TEX-I"></mjx-c></mjx-mi><mjx-script
+                                                        style="vertical-align: -0.15em;"><mjx-texatom size="s"
+                                                                                                      texclass="ORD"><mjx-mi
+                                                        class="mjx-i"><mjx-c class="mjx-c1D707 TEX-I"></mjx-c></mjx-mi><mjx-mi
+                                                        class="mjx-i"><mjx-c class="mjx-c1D708 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo
+                                                        class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn
+                                                        class="mjx-n" space="4"><mjx-c class="mjx-c38"></mjx-c></mjx-mn><mjx-mi
+                                                        class="mjx-i"><mjx-c class="mjx-c1D70B TEX-I"></mjx-c></mjx-mi><mjx-mi
+                                                        class="mjx-i"><mjx-c class="mjx-c1D43A TEX-I"></mjx-c></mjx-mi><mjx-mo
+                                                        class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi
+                                                        class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-script
+                                                        style="vertical-align: -0.15em; margin-left: -0.12em;"><mjx-texatom
+                                                        size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c
+                                                        class="mjx-c1D707 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c
+                                                        class="mjx-c1D708 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo
+                                                        class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-msub
+                                                        space="3"><mjx-mi class="mjx-i"><mjx-c
+                                                        class="mjx-c1D70C TEX-I"></mjx-c></mjx-mi><mjx-script
+                                                        style="vertical-align: -0.153em;"><mjx-mi class="mjx-n"
+                                                                                                  size="s"><mjx-c
+                                                        class="mjx-c39B"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-msub><mjx-mi
+                                                        class="mjx-i"><mjx-c class="mjx-c1D454 TEX-I"></mjx-c></mjx-mi><mjx-script
+                                                        style="vertical-align: -0.15em;"><mjx-texatom size="s"
+                                                                                                      texclass="ORD"><mjx-mi
+                                                        class="mjx-i"><mjx-c class="mjx-c1D707 TEX-I"></mjx-c></mjx-mi><mjx-mi
+                                                        class="mjx-i"><mjx-c class="mjx-c1D708 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo
+                                                        class="mjx-n"><mjx-c
+                                                        class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml
+                                                        unselectable="on" display="inline"><math
+                                                        xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>G</mi><mrow
+                                                        data-mjx-texclass="ORD"><mi>μ</mi><mi>ν</mi></mrow></msub><mo>=</mo><mn>8</mn><mi>π</mi><mi>G</mi><mo
+                                                        stretchy="false">(</mo><msub><mi>T</mi><mrow
+                                                        data-mjx-texclass="ORD"><mi>μ</mi><mi>ν</mi></mrow></msub><mo>+</mo><msub><mi>ρ</mi><mi
+                                                        mathvariant="normal">Λ</mi></msub><msub><mi>g</mi><mrow
+                                                        data-mjx-texclass="ORD"><mi>μ</mi><mi>ν</mi></mrow></msub><mo
+                                                        stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container></span>.
+                                            </p>
+                                        </div>
+                                        <div class="admonition tip">
+                                            <p class="admonition-title"> نکته</p>
+                                            <p class="wy-text-left">15% if the service is good.</p>
+                                            <div class="wy-table-responsive">
+                                                <table class="docutils align-default">
+                                                    <thead>
+                                                    <tr class="row-odd">
+                                                        <th class="head"><p class="wy-text-left">Example</p></th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr class="row-even">
+                                                        <td><p class="wy-text-left">Thing1</p></td>
+                                                    </tr>
+                                                    <tr class="row-odd">
+                                                        <td><p class="wy-text-left">Thing2</p></td>
+                                                    </tr>
+                                                    <tr class="row-even">
+                                                        <td><p class="wy-text-left">Thing3</p></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="admonition warning">
+                                            <p class="admonition-title"> هشدار</p>
+                                            <p class="wy-text-left">Strong prose may provoke extreme mental exertion.
+                                                Reader discretion is strongly advised.</p>
+                                        </div>
+                                        <div class="admonition-and-by-the-way admonition">
+                                            <p class="admonition-title"> اتفاقا...</p>
+                                            <p class="wy-text-left">You can make up your own admonition too.</p>
+                                        </div>
+                                    </section>
+                                    <section id="topics-sidebars-and-rubrics">
+                                        <h3><a class="toc-backref" href="#id66" role="doc-backlink"><span
+                                                class="section-number">3.7.5. </span>Topics, Sidebars, and Rubrics</a><a
+                                                class="headerlink" href="#topics-sidebars-and-rubrics"
+                                                title="Permalink to this heading"></a></h3>
+                                        <aside class="sidebar">
+                                            <p class="sidebar-title wy-text-left">Sidebar Title</p>
+                                            <p class="sidebar-subtitle">Optional Subtitle</p>
+                                            <p class="wy-text-left">This is a sidebar. It is for text outside the flow
+                                                of the main
+                                                text.</p>
+                                            <p class="rubric">This is a rubric inside a sidebar</p>
+                                            <p class="wy-text-left">Sidebars often appears beside the main text with a
+                                                border and
+                                                background color.</p>
+                                        </aside>
+                                        <aside class="topic">
+                                            <p class="wy-text-left">Topic Title</p>
+                                            <p class="wy-text-left">This is a topic</p>
+                                        </aside>
+                                        <p class="rubric wy-text-left">This is a rubric</p>
+                                    </section>
+                                    <section id="target-footnotes">
+                                        <h3><a class="toc-backref" href="#id67" role="doc-backlink"><span
+                                                class="section-number">3.7.6. </span>Target Footnotes</a><a
+                                                class="headerlink" href="#target-footnotes"
+                                                title="Permalink to this heading"></a></h3>
+                                        <aside class="footnote-list brackets">
+                                            <aside class="footnote brackets" id="id37" role="doc-footnote">
+                                                <span class="label"><span class="fn-bracket">[</span>5<span
+                                                        class="fn-bracket">]</span></span>
+                                                <span class="backrefs">(<a role="doc-backlink" href="#id38">1</a>,<a
+                                                        role="doc-backlink" href="#id39">2</a>,<a role="doc-backlink"
+                                                                                                  href="#id40">3</a>)</span>
+                                                <p class="wy-text-left"><a class="reference external"
+                                                                           href="http://www.python.org/">http://www.python.org/</a>
+                                                </p>
+                                            </aside>
+                                        </aside>
+                                    </section>
+                                    <section id="replacement-text">
+                                        <h3><a class="toc-backref" href="#id68" role="doc-backlink"><span
+                                                class="section-number">3.7.7. </span>Replacement Text</a><a
+                                                class="headerlink" href="#replacement-text"
+                                                title="Permalink to this heading"></a></h3>
+                                        <p class="wy-text-left">I recommend you try <a class="reference external"
+                                                                                       href="http://www.python.org/">Python,
+                                            <em>the</em>
+                                            best language around</a> <a class="footnote-reference brackets" href="#id37"
+                                                                        id="id40" role="doc-noteref"><span
+                                                class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>.</p>
+                                    </section>
+                                    <section id="compound-paragraph">
+                                        <h3><a class="toc-backref" href="#id69" role="doc-backlink"><span
+                                                class="section-number">3.7.8. </span>Compound Paragraph</a><a
+                                                class="headerlink" href="#compound-paragraph"
+                                                title="Permalink to this heading"></a></h3>
+                                        <div class="compound">
+                                            <p class="wy-text-left">This paragraph contains a literal block:</p>
+                                            <div class="highlight-default notranslate">
+                                                <div class="highlight wy-text-left"><pre><span></span><span
+                                                        class="n">Connecting</span><span class="o">...</span> <span
+                                                        class="n">OK</span>
+                                                        <span class="n">Transmitting</span> <span
+                                                            class="n">data</span><span class="o">...</span> <span
+                                                            class="n">OK</span>
+                                                        <span class="n">Disconnecting</span><span
+                                                            class="o">...</span> <span class="n">OK</span>
+                                                        </pre>
+                                                </div>
+                                            </div>
+                                            <p class="wy-text-left">and thus consists of a simple paragraph, a literal
+                                                block, and
+                                                another simple paragraph. Nonetheless it is semantically <em>one</em>
+                                                paragraph.</p>
+                                        </div>
+                                        <p class="wy-text-left">This construct is called a <em>compound paragraph</em>
+                                            and can be produced
+                                            with the “compound” directive.</p>
+                                    </section>
+                                </section>
+                                <section id="download-links">
+                                    <h2><a class="toc-backref" href="#id70" role="doc-backlink"><span
+                                            class="section-number">3.8. </span>Download Links</a><a class="headerlink"
+                                                                                                    href="#download-links"
+                                                                                                    title="Permalink to this heading"></a>
+                                    </h2>
+                                    <p class="wy-text-left"><a class="reference download internal" download=""
+                                                               href="../_downloads/64d5ed2a09e9d7815be87c81948753c9/yi_jing_01_chien.jpg"><code
+                                            class="xref download docutils literal notranslate"><span
+                                            class="pre">This</span> <span class="pre">long</span> <span
+                                            class="pre">long</span> <span class="pre">long</span> <span
+                                            class="pre">long</span> <span class="pre">long</span> <span
+                                            class="pre">long</span> <span class="pre">long</span> <span
+                                            class="pre">long</span> <span class="pre">long</span> <span
+                                            class="pre">long</span> <span class="pre">long</span> <span
+                                            class="pre">long</span> <span class="pre">long</span> <span
+                                            class="pre">long</span> <span class="pre">long</span> <span class="pre">download</span>
+                                        <span class="pre">link</span> <span class="pre">should</span> <span class="pre">be</span>
+                                        <span class="pre">blue,</span> <span class="pre">normal</span> <span
+                                                class="pre">weight</span> <span class="pre">text</span> <span
+                                                class="pre">with</span> <span class="pre">a</span> <span class="pre">leading</span>
+                                        <span class="pre">icon,</span> <span class="pre">and</span> <span class="pre">should</span>
+                                        <span class="pre">wrap</span> <span class="pre">white-spaces</span></code></a>
+                                    </p>
+                                </section>
+                            </section>
+
+
+                        </div>
+                    </div>
+
+                    <!-- footer-buttons  -->
+                    <div class="rst-footer-buttons mt-4" role="navigation" aria-label="Footer">
+                        <a href="index.html" class="btn btn-neutral float-left" title="Read the Docs Sphinx Theme"
+                           accesskey="p" rel="prev">
+                            Previous
+                            <span class="fa fa-arrow-circle-left" aria-hidden="true"></span>
+                        </a>
+                        <a href="configuring.html" class="btn btn-neutral float-right" title="Configuration"
+                           accesskey="n" rel="next">
+                            <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
+                            Next
+                        </a>
+                    </div>
+
+                    <!-- footer -->
+                    {% include "core/include/footer.html" %}
+                </div>
+            </div>
+
+        </section>
+    </div>
+{% endblock %}
+
+{% block Javascript %}
+    {% include "core/include/script.html" %}
+{% endblock %}
+
+

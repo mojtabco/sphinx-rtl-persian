@@ -1,0 +1,304 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html dir="rtl" class="writer-html5" lang="en" data-content_root="./">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MBTI documentation &mdash; MBTI mbti documentation</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/pygments.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/theme.css' %}"/>
+
+    <script src="{% static 'assets/js/jquery.js' %}"></script>
+    <script src="{% static 'assets/js/_sphinx_javascript_frameworks_compat.js' %}"></script>
+    <script src="{% static 'assets/js/documentation_options.js' %}"></script>
+    <script src="{% static 'assets/js/doctools.js' %}"></script>
+    <script src="{% static 'assets/js/sphinx_highlight.js' %}"></script>
+    <script src="{% static 'assets/js/theme.js' %}"></script>
+
+    <link rel="stylesheet" type=text/css href="{% static 'assets/css/rtl.css' %}">
+    <link href="{% static 'assets/css/font.css' %}" rel="stylesheet" type="text/css">
+    <link rel="index" title="Index" href="genindex.html"/>
+    <link rel="search" title="Search" href="search.html"/>
+</head>
+<body class="wy-body-for-nav">
+<div class="wy-grid-for-nav ">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+        <div class="wy-side-scroll">
+            <div class="wy-side-nav-search">
+
+                <span class="icon icon-home wy-text-center"></span>
+
+                <a href="#" class=" wy-text-center">
+                    Sphinx RTL django
+                </a>
+
+
+                <div role="search">
+                    <form id="rtd-search-form" action="search.html" method="get">
+                        <input class="wy-search" type="text" name="q" placeholder="جستجو..." aria-label="Search docs"/>
+                        <input type="hidden" name="check_keywords" value="yes"/>
+                        <input type="hidden" name="area" value="default"/>
+                    </form>
+                </div>
+            </div>
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+                <p class="caption" role="heading">
+                    <span class="caption-text">منو</span>
+                </p>
+                <!-- Local TOC -->
+                <div class="local-toc">
+                    <ul>
+                        <li class="toctree-l1">
+                            <a class="reference internal" href="{% url 'index' %}">
+                                صفحه اصلی
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="toctree-l1 " aria-expanded="true">
+                            <a class="reference internal " href="{% url 'elements' %}">
+                                <span class="icon fa-plus-square"> </span>
+                                المنت های پایه ای
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap align-left">
+        <nav class="wy-nav-top" aria-label="Mobile navigation menu">
+            <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+            <a href="#">MBTI</a>
+        </nav>
+
+        <div class="wy-nav-content">
+            <div class="rst-content">
+                <div role="navigation" aria-label="Page navigation">
+                    <ul class="wy-breadcrumbs">
+                        <li class="breadcrumb">
+                            <a href="#" class="icon icon-home" aria-label="Home"></a>
+                        </li>
+                        <li class="breadcrumb-item wy-breadcrumbs-extra active ">
+                            صفحه اصلی
+                        </li>
+
+                        <li class="wy-breadcrumbs float-left">
+                            <a href="{% static 'assets/sources/index.rst.txt' %}" rel="nofollow"> View page source</a>
+                        </li>
+                    </ul>
+                    <hr/>
+                    <div class="admonition note">
+                        <p class="admonition-title">  نکته</p>
+                        <p class="wy-text-left">
+                            On some systems you may need to use
+                            <code class="docutils literal notranslate">
+                                <span class="pre">sudo</span>
+                                <span class="pre">python</span>
+                                <span class="pre">setup.py</span> <span class="pre">install</span>
+                            </code>
+                            to install peewee system-wide
+                        </p>
+                        <p class="wy-text-right">
+                            یکی از محبوب‌ترین تمپلیت‌های طراحی‌شده برای مستندسازی با ابزار Sphinx است که معمولاً
+                            برای پروژه‌های متن‌باز استفاده می‌شود.
+                            این تمپلیت توسط تیم Read the Docs توسعه یافته و به طور پیش‌فرض در بسیاری از پروژه‌هایی
+                            که از مستندسازی Sphinx استفاده می‌کنند، به کار می‌رود.
+                            در ادامه ویژگی‌های کلیدی این تمپلیت آورده شده است:
+                        </p>
+
+                    </div>
+                </div>
+                <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                    <div itemprop="articleBody">
+
+                        <section id="blocks">
+                            <h3>ویژگی‌های کلیدی sphinx-rtd-theme
+                                <a class="headerlink" href="#how-to-install-and-use-the-theme"
+                                   title="Permalink to this heading"></a>
+                            </h3>
+
+                            <h5>
+                                <a class="toc-backref" href="#id5" role="doc-backlink">
+                                    <span class="section-number">1. </span>
+                                    طراحی ریسپانسیو
+                                </a>
+                                <a class="headerlink" href="#document-section" title="Permalink to this heading"></a>
+                            </h5>
+                            <blockquote>
+                                <div>
+                                    <p>
+                                        این تمپلیت به طور کامل برای دستگاه‌های مختلف بهینه‌سازی شده است و در موبایل،
+                                        تبلت و
+                                        دسکتاپ به خوبی نمایش داده می‌شود.
+                                    </p>
+
+                                </div>
+                            </blockquote>
+
+                            <h5>
+                                <a class="toc-backref" href="#id5" role="doc-backlink">
+                                    <span class="section-number">2. </span>
+                                    منوی ناوبری چندسطحی
+                                </a>
+                                <a class="headerlink" href="#document-section" title="Permalink to this heading"></a>
+                            </h5>
+                            <blockquote>
+                                <div>
+                                    <p>
+                                        منوی سمت چپ از نوع چندسطحی است و امکان پیمایش بین بخش‌های مختلف مستندات را فراهم
+                                        می‌کند. این قابلیت برای پروژه‌های بزرگ با ساختار پیچیده مفید است.
+                                    </p>
+
+                                </div>
+                            </blockquote>
+
+                            <h5>
+                                <a class="toc-backref" href="#id5" role="doc-backlink">
+                                    <span class="section-number">3. </span>
+                                    پشتیبانی از نسخه‌بندی
+                                </a>
+                                <a class="headerlink" href="#document-section" title="Permalink to this heading"></a>
+                            </h5>
+                            <blockquote>
+                                <div>
+                                    <p>
+                                        امکان مدیریت و نمایش نسخه‌های مختلف مستندات فراهم است. این ویژگی برای پروژه‌هایی
+                                        که به‌روزرسانی‌های منظم دارند، کاربردی است.
+                                    </p>
+
+                                </div>
+                            </blockquote>
+
+                            <h5>
+                                <a class="toc-backref" href="#id5" role="doc-backlink">
+                                    <span class="section-number">4. </span>
+                                    نمایش کد بهینه
+                                </a>
+                                <a class="headerlink" href="#document-section" title="Permalink to this heading"></a>
+                            </h5>
+                            <blockquote>
+                                <div>
+                                    <p>
+                                        مستندسازی کد با این تمپلیت به خوبی انجام می‌شود. این تمپلیت از Pygments برای
+                                        هایلایت کد پشتیبانی می‌کند.
+                                    </p>
+
+                                </div>
+                            </blockquote>
+
+                            <h5>
+                                <a class="toc-backref" href="#id5" role="doc-backlink">
+                                    <span class="section-number">5. </span>
+                                    یکپارچگی با Read the Docs
+                                </a>
+                                <a class="headerlink" href="#document-section" title="Permalink to this heading"></a>
+                            </h5>
+                            <blockquote>
+                                <div>
+                                    <p>
+                                        این تمپلیت به طور پیش‌فرض در پلتفرم Read the Docs استفاده می‌شود و نیازی به
+                                        تنظیمات پیچیده برای همگام‌سازی وجود ندارد.
+                                    </p>
+
+                                </div>
+                            </blockquote>
+
+                            <h5>
+                                <a class="toc-backref" href="#id5" role="doc-backlink">
+                                    <span class="section-number">6. </span>
+                                    قابلیت شخصی‌سازی
+                                </a>
+                                <a class="headerlink" href="#document-section" title="Permalink to this heading"></a>
+                            </h5>
+                            <blockquote>
+                                <div>
+                                    <p>
+                                        می‌توانید با استفاده از فایل‌های CSS یا سفارشی‌سازی Sphinx، طراحی و ظاهر تمپلیت
+                                        را تغییر دهید.
+                                    </p>
+
+                                </div>
+                            </blockquote>
+
+                            <h5>
+                                <a class="toc-backref" href="#id5" role="doc-backlink">
+                                    <span class="section-number">7. </span>
+                                    دسترس‌پذیری (Accessibility)
+                                </a>
+                                <a class="headerlink" href="#document-section" title="Permalink to this heading"></a>
+                            </h5>
+                            <blockquote>
+                                <div>
+                                    <p>
+                                        تمپلیت برای دسترس‌پذیری بهینه‌سازی شده و از استانداردهای وب پیروی می‌کند.
+                                    </p>
+
+                                </div>
+                            </blockquote>
+
+
+                            <p class="wy-text-left">
+                                Add your content using
+                                <code class="docutils literal notranslate">
+                                    <span class="pre">reStructuredText</span>
+                                </code>
+                                syntax. See the
+                                <a class="reference external"
+                                   href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">
+                                    reStructuredText
+                                </a>
+                                documentation for details
+                            </p>
+                            <div class="toctree-wrapper compound">
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+
+                <footer>
+                    <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+                        <a href="index.html" class="btn btn-neutral float-left" title="Read the Docs Sphinx Theme"
+                           accesskey="p" rel="prev">
+                            Previous
+                            <span class="fa fa-arrow-circle-left" aria-hidden="true"></span>
+                        </a>
+                        <a href="configuring.html" class="btn btn-neutral float-right" title="Configuration"
+                           accesskey="n" rel="next">
+                            <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
+                            Next
+                        </a>
+
+                    </div>
+                    <hr/>
+                    <div role="contentinfo" class="align-left">
+                        <p class="english-numbers">&#169; Copyright 2025, Mojtaba</p>
+                    </div>
+                    Built with
+                    <a href="https://www.sphinx-doc.org/">Sphinx</a>
+
+                    using a
+                    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+
+                    provided by
+                    <a href="https://readthedocs.org">Read the Docs</a>
+
+                </footer>
+
+            </div>
+        </div>
+    </section>
+</div>
+<script>
+    jQuery(function () {
+        SphinxRtdTheme.Navigation.enable(true);
+    });
+</script>
+
+</body>
+</html>
